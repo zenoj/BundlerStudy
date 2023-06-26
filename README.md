@@ -1,6 +1,9 @@
-# BT
+# Project "Jack-in-the-box: An Empirical Study of JavaScript Bundling on the Web and its Security Implications"
+This repository contains the measurement framework for the paper "Jack-in-the-box: An Empirical Study of JavaScript Bundling on the Web and its Security Implications". The framework consists of three steps: crawling and bundle identification, bundle reversing, and security analysis.
+The crawling step is implemented in the file: scraper.js. It uses the fingerprints located in the folder with the same name to identify bundled code from 5 different bundlers. The most popular bundler is Webpack, our further analysis therefore focueses on Webpack bundles. 
+BundleStats/runWebpackAnalysis.js is used for the bundle reversing step, which includes the analysis of sourcemaps (if available). In the best case this step outputs library names which we can use to query: https://api.npms.io/v2/ and https://security.snyk.io/package/npm/ for the security analysis in the last step.
+As an additional effort we include a methodology to identify libraries and their respective versions using static analysis techniques. The implementation for this is contained in the LibraryStudy folder.
 
-Folders that might be interesting to contributers are the following:
 
 ## Fingerprints
 The fingerprints used to detect bundles grouped by the different bundler software.
@@ -12,8 +15,7 @@ was used for the crawling task.
 It detects and writes the bundles to a file in a certain form, so that we can parse out the important parts more easily later on.
 
 ## BundleStats
-BundleStats/runWebpackAnalysis.js analyses all files in a directory to find identified webpack bundles and parses out the important parts to
-write a report about it.
+BundleStats/runWebpackAnalysis.js analyses webpack bundles and tries to extract the included CommonJS modules and outputs a report about it. In this step it also
 This report can be used for further processing.
 
 ## Sourcemaps
@@ -37,7 +39,7 @@ Contains files to extract features from bundle files (computeScore/writeFeatures
 An additional criteria to determine a specific library version is by looking at the unique features of that version. This can be done with uniqueFeaturesAnalysis.py.
 
 ### similarVersions
-Contains a small study on how similar lodash versions are considering a set of certain features types.
+Contains a small study on how similar lodash versions are considering a set of certain feature types.
 
 
 
