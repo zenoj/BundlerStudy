@@ -25,8 +25,6 @@ This report can be used for further processing.
 ## Sourcemaps
 Function sourceMapFinder(): is a function that takes a javascript file and the url 
 where it was found and tries to download the sourcemap from it. 
-Before the sourcemap is returned, we group together the found libraries mentioned in the sourcemap.
-This last step is done by createSCCsToSizeFromSourceMap().
 
 ## Webpack
 analyseWebpack.js (function "analyseBundle") contains the logic that is used by runWebpackAnalysis.js to extract the important parts from a bundle.
