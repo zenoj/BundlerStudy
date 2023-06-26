@@ -25,6 +25,19 @@ This last step is done by createSCCsToSizeFromSourceMap().
 ## Webpack
 analyseWebpack.js (function "analyseBundle") contains the logic that is used by runWebpackAnalysis.js to extract the important parts from a bundle.
 
+## LibraryStudy
+Code inside here is used to detect libraries inside bundled code, through static analysis.
+
+### bundleLibraries
+Is used to build a feature database for a particular library. These features are then used to detect a library in a bundle and its particular version.
+
+### identifyLodash
+Contains files to extract features from bundle files (computeScore/writeFeaturesOfFile.js), and compute a similarity score to each version of a particular library (identifyLodash.py in this case we only search for lodash.js).
+
+An additional criteria to determine a specific library version is by looking at the unique features of that version. This can be done with uniqueFeaturesAnalysis.py.
+
+### similarVersions
+Contains a small study on how similar lodash versions are considering a set of certain features types.
 
 
 
