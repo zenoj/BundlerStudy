@@ -1,0 +1,2431 @@
+{
+    "4.17.21": {
+        "stringLiterals": {
+            "4.17.21": 0,
+            "variable": 9,
+            "Invalid `variable` option passed into `_.template`": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.1": {
+        "stringLiterals": {
+            "\\d*(?:(?:1ST|2ND|3RD|(?![123])\\dTH)\\b)": 6,
+            "\\d*(?:(?:1st|2nd|3rd|(?![123])\\dth)\\b)": 6,
+            "4.17.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.11.1": {
+        "stringLiterals": {
+            "4.11.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "88": 8
+        }
+    },
+    "4.6.0": {
+        "stringLiterals": {
+            "4.6.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.0.0": {
+        "stringLiterals": {
+            "2.0.0": 0,
+            "(": 7,
+            "__wrapped__ ": 9,
+            "__bindData__": 7,
+            "sample": 7,
+            "\n/*\n//# sourceURL=": 7
+        },
+        "numbers": {
+            "40": 8,
+            "17": 7,
+            "19": 7
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {
+            "cache": 9
+        },
+        "thisUsages": {
+            "16": 2
+        }
+    },
+    "4.8.0": {
+        "stringLiterals": {
+            "4.8.0": 1
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "88": 8
+        }
+    },
+    "3.8.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.15": {
+        "stringLiterals": {
+            "4.17.15": 0,
+            "variable": 9
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.5.1": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length > -1 && length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = nativeKeys(iteratee),\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    if (!(skipProto && index == 'prototype')) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }\n  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 1,
+            "0.5.1": 0,
+            "var prop;\nif (typeof callback != 'function') {\n  var valueProp = callback;\n  callback = function(value) { return value[valueProp] }\n}\nelse if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 6,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop]++ : result[prop] = 1)": 6,
+            "if (!callback(value, index, collection)) return !result": 9,
+            "callback(value, index, collection) && result.push(value)": 9,
+            "arrayLikeClasses, ArrayProto, bind, compareAscending, concat, forIn, hasOwnProperty, identity, indexOf, isArguments, isArray, isFunction, isPlainObject, iteratorBind, objectClass, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString": 5,
+            "%>": 9,
+            "if (!(object && objectTypes[typeof object])) return result": 0,
+            "var props = concat.apply(ArrayProto, arguments)": 3,
+            "if (indexOf(props, index) < 0) result[index] = value": 3,
+            "if (isFunction(value)) result.push(index)": 7,
+            "result.push(value)": 9,
+            "if (value === target) return true": 9,
+            "if (callback(value, index, collection)) return value": 9,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(value)": 6,
+            "object, source, indicator, stack": 5,
+            "var destValue, found, isArr, stackLength, recursive = indicator == isPlainObject;\nif (!recursive) stack = [];\nfor (var argsIndex = 1, argsLength = recursive ? 2 : arguments.length; argsIndex < argsLength; argsIndex++) {\n  if (iteratee = arguments[argsIndex]) {": 5,
+            "if (value && ((isArr = isArray(value)) || isPlainObject(value))) {\n  found = false; stackLength = stack.length;\n  while (stackLength--) {\n    if (found = stack[stackLength].source == value) break\n  }\n  if (found) {\n    result[index] = stack[stackLength].value\n  } else {\n    destValue = (destValue = result[index]) && isArr\n      ? (isArray(destValue) ? destValue : [])\n      : (isPlainObject(destValue) ? destValue : {});\n    stack.push({ value: destValue, source: value });\n    result[index] = callee(destValue, value, isPlainObject, stack)\n  }\n} else if (value != null) {\n  result[index] = value\n}": 5,
+            "collection, properties": 9,
+            "var pass, prop, propIndex, props = [];\nforIn(properties, function(value, prop) { props.push(prop) });\nvar propsLength = props.length": 3,
+            "for (pass = true, propIndex = 0; propIndex < propsLength; propIndex++) {\n  prop = props[propIndex];\n  if (!(pass = value[prop] === properties[prop])) break\n}\nif (pass) result.push(value)": 3,
+            "var funcs = arguments,\n    length = funcs.length;\nif (length > 1) {\n  for (var index = 1; index < length; index++) {\n    result[funcs[index]] = bind(result[funcs[index]], result)\n  }\n  return result\n}": 7,
+            "if (isFunction(result[index])) {\n  result[index] = bind(result[index], result)\n}": 6,
+            "result[index] = callback(value, index, collection)": 9,
+            "noCharByIndex": 6,
+            "\n};\nreturn callee": 9,
+            "<e%-": 9,
+            "<e%=": 9,
+            " ||\n  (className == objectClass && length > -1 && length === length >>> 0 &&\n  isFunction(value.splice))) return !length": 5,
+            "//@cc_on !": 4,
+            "(callback(value, index, collection))": 9,
+            "var className = toString.call(value),\n    length = value.length;\nif (arrayLikeClasses[className]": 7,
+            "if (toString.call(iteratee) == stringClass) return collection.indexOf(target) > -1": 6,
+            "result[index] = (isFunc ? methodName : value[methodName]).apply(value, args)": 9,
+            "result[index] = value[property]": 9,
+            "result = callback(result, value, index, collection)": 9,
+            "result = noaccum\n  ? (noaccum = false, value)\n  : callback(result, value, index, collection)": 9,
+            "result[index] = {\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n}": 8,
+            " || isArguments(value)": 9,
+            "((isFunc ? methodName : value[methodName]).apply(value, args))": 9,
+            "(value[property])": 9,
+            "({\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n})": 8,
+            "[ownIndex] = ": 9,
+            "var callee = function(": 9,
+            "<e%-([\\s\\S]+?)%>|<e%=([\\s\\S]+?)%>": 6,
+            " = {});\nvar __t, __p = '', __e = _.escape": 4
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.1.0": {
+        "stringLiterals": {
+            "2.1.0": 0,
+            "(": 7,
+            "__wrapped__ ": 9,
+            "__bindData__": 7,
+            "sample": 7,
+            "\n/*\n//# sourceURL=": 7
+        },
+        "numbers": {
+            "40": 8,
+            "17": 7,
+            "19": 7
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {
+            "cache": 9
+        },
+        "thisUsages": {
+            "16": 2
+        }
+    },
+    "4.17.12": {
+        "stringLiterals": {
+            "4.17.12": 0,
+            "variable": 9
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.13.0": {
+        "stringLiterals": {
+            "4.13.0": 0,
+            "This method is not supported with `core-js`. Try https://github.com/es-shims.": 1
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "100": 6
+        }
+    },
+    "3.9.3": {
+        "stringLiterals": {
+            "isArray": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.16.5": {
+        "stringLiterals": {
+            "\\d*(?:(?:1ST|2ND|3RD|(?![123])\\dTH)\\b)": 6,
+            "\\d*(?:(?:1st|2nd|3rd|(?![123])\\dth)\\b)": 6,
+            "4.16.5": 0,
+            "Unsupported core-js use. Try https://github.com/es-shims.": 4
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.7.0": {
+        "stringLiterals": {
+            "__token": 0,
+            "__": 0,
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length > -1 && length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;\n    <% if (!hasDontEnumBug || useHas) { %>}\n<% } %>  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.7.0": 0,
+            "var prop;\nif (typeof callback != 'function') {\n  var valueProp = callback;\n  callback = function(value) { return value[valueProp] }\n}\nelse if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 6,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop]++ : result[prop] = 1)": 6,
+            "if (!callback(value, index, collection)) return !result": 9,
+            "callback(value, index, collection) && result.push(value)": 9,
+            "object, callback, thisArg": 5,
+            "var isFunc = typeof callback == 'function';\nif (!isFunc) {\n  var props = concat.apply(ArrayProto, arguments)\n} else if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 2,
+            "if (isFunc\n  ? !callback(value, index, object)\n  : indexOf(props, index) < 0\n) result[index] = value": 5,
+            "arrayLikeClasses, ArrayProto, bind, compareAscending, concat, forIn, hasOwnProperty, identity, indexOf, isArguments, isArray, isFunction, isPlainObject, iteratorBind, objectClass, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString": 5,
+            "%>": 9,
+            "if (isFunction(value)) result.push(index)": 7,
+            "result[value] = index": 3,
+            "object, source, indicator": 3,
+            "var isArr, recursive = indicator == isPlainObject,\n    data = recursive ? arguments[3] : { values: [], sources: [] };\nfor (var argsIndex = 1, argsLength = recursive ? 2 : arguments.length; argsIndex < argsLength; argsIndex++) {\n  if (iteratee = arguments[argsIndex]) {": 0,
+            "if ((source = value) && ((isArr = isArray(source)) || isPlainObject(source))) {\n  var found = false, values = data.values, sources = data.sources, stackLength = sources.length;\n  while (stackLength--) {\n    if (found = sources[stackLength] == source) break\n  }\n  if (found) {\n    result[index] = values[stackLength]\n  } else {\n    values.push(value = (value = result[index]) && isArr\n      ? (isArray(value) ? value : [])\n      : (isPlainObject(value) ? value : {})\n    );\n    sources.push(source);\n    result[index] = callee(value, source, isPlainObject, data)\n  }\n} else if (source != null) {\n  result[index] = source\n}": 0,
+            "if (typeof callback != 'function') {\n  var prop,\n      props = concat.apply(ArrayProto, arguments),\n      length = props.length;\n  for (index = 1; index < length; index++) {\n    prop = props[index];\n    if (prop in object) result[prop] = object[prop]\n  }\n} else {\n  if (thisArg) callback = iteratorBind(callback, thisArg)": 2,
+            "if (callback(value, index, object)) result[index] = value": 5,
+            "result.push(value)": 9,
+            "if (value === target) return true": 9,
+            "if (callback(value, index, collection)) return value": 9,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(value)": 6,
+            "collection, properties": 9,
+            "var props = [];\nforIn(properties, function(value, prop) { props.push(prop) });\nvar propsLength = props.length": 5,
+            "for (var prop, pass = true, propIndex = 0; propIndex < propsLength; propIndex++) {\n  prop = props[propIndex];\n  if (!(pass = value[prop] === properties[prop])) break\n}\npass && result.push(value)": 4,
+            "var funcs = arguments,\n    length = funcs.length;\nif (length > 1) {\n  for (var index = 1; index < length; index++) {\n    result[funcs[index]] = bind(result[funcs[index]], result)\n  }\n  return result\n}": 7,
+            "if (isFunction(result[index])) {\n  result[index] = bind(result[index], result)\n}": 6,
+            "result[index] = callback(value, index, collection)": 9,
+            "\n};\nreturn callee": 9,
+            "<e%-": 9,
+            "<e%=": 9,
+            " ||\n  (className == objectClass && length > -1 && length === length >>> 0 &&\n  isFunction(value.splice))) return !length": 5,
+            "([index, value])": 3,
+            "(callback(value, index, collection))": 9,
+            "var className = toString.call(value),\n    length = value.length;\nif (arrayLikeClasses[className]": 7,
+            "if (toString.call(collection) == stringClass) return collection.indexOf(target) > -1": 5,
+            "result[index] = (isFunc ? methodName : value[methodName]).apply(value, args)": 9,
+            "result[index] = value[property]": 9,
+            "if (noaccum) result = iteratee[++index]": 5,
+            "result = callback(result, value, index, collection)": 9,
+            "result = noaccum\n  ? (noaccum = false, value)\n  : callback(result, value, index, collection)": 9,
+            "result[index] = {\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n}": 8,
+            " || isArguments(value)": 9,
+            "[ownIndex] = ": 9,
+            "((isFunc ? methodName : value[methodName]).apply(value, args))": 9,
+            "(value[property])": 9,
+            "({\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n})": 8,
+            "var callee = function(": 9,
+            "<e%-([\\s\\S]+?)%>|<e%=([\\s\\S]+?)%>": 6
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.16.4": {
+        "stringLiterals": {
+            "4.16.4": 0,
+            "Unsupported core-js use. Try https://github.com/es-shims.": 4
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.0": {
+        "stringLiterals": {
+            "\\d*(?:(?:1ST|2ND|3RD|(?![123])\\dTH)\\b)": 6,
+            "\\d*(?:(?:1st|2nd|3rd|(?![123])\\dth)\\b)": 6,
+            "4.17.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.9.0": {
+        "stringLiterals": {
+            "isArray": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.3.0": {
+        "stringLiterals": {
+            "2.3.0": 0,
+            "(": 7,
+            ".*?": 3,
+            "__bindData__": 7,
+            "sample": 7,
+            "\n/*\n//# sourceURL=": 7
+        },
+        "numbers": {
+            "40": 8,
+            "17": 7,
+            "19": 7
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {
+            "cache": 9
+        },
+        "thisUsages": {
+            "17": 1
+        }
+    },
+    "4.16.1": {
+        "stringLiterals": {
+            "4.16.1": 0,
+            "This method is not supported with core-js. Try https://github.com/es-shims.": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.8.1": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === +length) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.8.1": 0,
+            "callback = createCallback(callback, thisArg)": 6,
+            "var prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop]++ : result[prop] = 1)": 2,
+            "if (!callback(value, index, collection)) return !result": 9,
+            "callback(value, index, collection) && result.push(value)": 9,
+            "object, callback, thisArg": 5,
+            "var isFunc = typeof callback == 'function';\nif (isFunc) callback = createCallback(callback, thisArg);\nelse var props = concat.apply(ArrayProto, arguments)": 2,
+            "if (isFunc\n  ? !callback(value, index, object)\n  : indexOf(props, index) < 0\n) result[index] = value": 5,
+            "arrayLikeClasses, ArrayProto, bind, compareAscending, concat, createCallback, forIn, hasOwnProperty, indexOf, isArguments, isArray, isFunction, isPlainObject, objectClass, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString, undefined": 1,
+            "result[value] = index": 3,
+            "if (isFunction(value)) result.push(index)": 7,
+            "object, source, indicator": 3,
+            "var isArr, args = arguments, argsIndex = 0;\nif (indicator == compareAscending) {\n  var argsLength = 2, stackA = args[3], stackB = args[4]\n} else {\n  var argsLength = args.length, stackA = [], stackB = []\n}\nwhile (++argsIndex < argsLength) {\n  if (iteratee = args[argsIndex]) {": 2,
+            "if ((source = value) && ((isArr = isArray(source)) || isPlainObject(source))) {\n  var found = false, stackLength = stackA.length;\n  while (stackLength--) {\n    if (found = stackA[stackLength] == source) break\n  }\n  if (found) {\n    result[index] = stackB[stackLength]\n  } else {\n    stackA.push(source);\n    stackB.push(value = (value = result[index]) && isArr\n      ? (isArray(value) ? value : [])\n      : (isPlainObject(value) ? value : {})\n    );\n    result[index] = callee(value, source, compareAscending, stackA, stackB)\n  }\n} else if (source != null) {\n  result[index] = source\n}": 1,
+            "if (typeof callback != 'function') {\n  var prop,\n      props = concat.apply(ArrayProto, arguments),\n      length = props.length;\n  for (index = 1; index < length; index++) {\n    prop = props[index];\n    if (prop in object) result[prop] = object[prop]\n  }\n} else {\n  callback = createCallback(callback, thisArg)": 1,
+            "if (callback(value, index, object)) result[index] = value": 5,
+            "result.push(value)": 9,
+            "if (value === target) return true": 9,
+            "if (callback(value, index, collection)) return value": 9,
+            "var prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(value)": 2,
+            "var noaccum = arguments.length < 3;\ncallback = createCallback(callback, thisArg)": 2,
+            "collection, properties": 9,
+            "var props = [];\nforIn(properties, function(value, prop) { props.push(prop) });\nvar propsLength = props.length": 5,
+            "for (var prop, pass = true, propIndex = 0; propIndex < propsLength; propIndex++) {\n  prop = props[propIndex];\n  if (!(pass = value[prop] === properties[prop])) break\n}\npass && result.push(value)": 4,
+            "var funcs = arguments,\n    length = funcs.length;\nif (length > 1) {\n  for (var index = 1; index < length; index++) {\n    result[funcs[index]] = bind(result[funcs[index]], result)\n  }\n  return result\n}": 7,
+            "if (isFunction(value)) {\n  result[index] = bind(value, result)\n}": 0,
+            "result[index] = callback(value, index, collection)": 9,
+            "\n};\nreturn callee": 9,
+            " ||\n  (className == objectClass && length === +length &&\n  isFunction(value.splice))) return !length": 2,
+            "([index, value])": 3,
+            "(callback(value, index, collection))": 9,
+            "var className = toString.call(value),\n    length = value.length;\nif (arrayLikeClasses[className]": 7,
+            "if (toString.call(collection) == stringClass) return collection.indexOf(target) > -1": 5,
+            "result[index] = (isFunc ? methodName : value[methodName]).apply(value, args)": 9,
+            "result[index] = value[property]": 9,
+            "if (noaccum) result = iteratee[++index]": 5,
+            "result = callback(result, value, index, collection)": 9,
+            "result = noaccum\n  ? (noaccum = false, value)\n  : callback(result, value, index, collection)": 9,
+            "result[index] = {\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n}": 8,
+            " || isArguments(value)": 9,
+            "[ownIndex] = ": 9,
+            "((isFunc ? methodName : value[methodName]).apply(value, args))": 9,
+            "(value[property])": 9,
+            "({\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n})": 8,
+            "var callee = function(": 9
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.4.2": {
+        "stringLiterals": {
+            "2.4.2": 0,
+            "(": 7,
+            ".*?": 3,
+            "__bindData__": 7,
+            "sample": 7,
+            "\n/*\n//# sourceURL=": 7
+        },
+        "numbers": {
+            "40": 8,
+            "17": 7,
+            "19": 7
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {
+            "cache": 9
+        },
+        "thisUsages": {
+            "15": 2
+        }
+    },
+    "0.9.1": {
+        "stringLiterals": {
+            "<% if (obj.useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result = <%= firstArg %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayLoop) { %>var length = iteratee.length; index = -1;\nif (typeof length == 'number') {  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayLoop %>\n  }\n}\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectLoop %>\n  }    <% } %>  <% } %>  <% if (arrayLoop || noArgsEnum) { %>\n}<% } %>\n<%= bottom %>;\nreturn result": 1,
+            "0.9.1": 0,
+            "callback = createCallback(callback, thisArg)": 6,
+            "createCallback, hasOwnProperty, isArguments, objectTypes, nativeKeys, propertyIsEnumerable, stringClass, toString": 1,
+            "\n//@ sourceURL=": 6
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.14.1": {
+        "stringLiterals": {
+            "4.14.1": 0,
+            "This method is not supported with core-js. Try https://github.com/es-shims.": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "100": 6
+        }
+    },
+    "4.2.1": {
+        "stringLiterals": {
+            "4.2.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.18": {
+        "stringLiterals": {
+            "4.17.18": 0,
+            "variable": 9
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.5": {
+        "stringLiterals": {
+            "4.17.5": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.1.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "3": 2
+        }
+    },
+    "4.14.0": {
+        "stringLiterals": {
+            "4.14.0": 0,
+            "This method is not supported with core-js. Try https://github.com/es-shims.": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "100": 6
+        }
+    },
+    "0.2.0": {
+        "stringLiterals": {
+            "var index, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = <%= firstArg %>.length; index = -1;  <% if (objectBranch) { %>\nif (length === +length) {<% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (<%= arrayBranch.loopExp %>) {\n    <%= arrayBranch.inLoop %>;\n  }  <% if (objectBranch) { %>\n}\n<% }}if (objectBranch) {  if (arrayBranch) { %>else {\n<% }  if (!hasDontEnumBug) { %>  var skipProto = typeof <%= iteratedObject %> == 'function';\n<% } %>  <%= objectBranch.beforeLoop %>;\n  for (<%= objectBranch.loopExp %>) {  \n<%  if (hasDontEnumBug) {    if (useHas) { %>    if (<%= hasExp %>) {\n  <% } %>    <%= objectBranch.inLoop %>;<%    if (useHas) { %>\n    }<% }  }  else {  %>    if (!(skipProto && index == 'prototype')<% if (useHas) { %> && <%= hasExp %><% } %>) {\n      <%= objectBranch.inLoop %>;\n    }  <% } %>\n  }  <% if (hasDontEnumBug) { %>\n  var ctor = <%= iteratedObject %>.constructor;\n  <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === <%= iteratedObject %>) && <%      } %><%= hasExp %>) {\n    <%= objectBranch.inLoop %>;\n  }<%     }   }   if (arrayBranch) { %>\n}<% }} %>\n<%= bottom %>;\nreturn result": 2,
+            "0.2.0": 0,
+            "if (!callback) {\n  callback = identity\n}\nelse if (thisArg) {\n  callback = bind(callback, thisArg)\n}": 2,
+            "callback(collection[index], index, collection)": 5,
+            "if (!callback(collection[index], index, collection)) return !result": 5,
+            "index in source": 6,
+            "object[index] = source[index]": 5,
+            "callback(collection[index], index, collection) && result.push(collection[index])": 5,
+            "&#x2F;": 2,
+            "for (var source, sourceIndex = 1, length = arguments.length; sourceIndex < length; sourceIndex++) {\n  source = arguments[sourceIndex];\n": 7,
+            "var className = toString.call(value);\nif (className == arrayClass || className == stringClass) return !value.length": 8,
+            "arrayClass, bind, concat, funcClass, hasOwnProperty, identity, indexOf, isArray, isEmpty, objectTypes, slice, stringClass, toString, undefined": 0,
+            "if (collection[index] === target) return true": 5,
+            "if (callback(collection[index], index, collection)) return collection[index]": 5,
+            "if (thisArg) callback = bind(callback, thisArg)": 2,
+            "var prop, isFunc = toString.call(callback) == funcClass;\nif (isFunc && thisArg) callback = bind(callback, thisArg)": 0,
+            "prop = isFunc\n  ? callback(collection[index], index, collection)\n  : collection[index][callback];\n(result[prop] || (result[prop] = [])).push(collection[index])": 0,
+            "var noaccum = arguments.length < 3;\nif (thisArg) callback = bind(callback, thisArg)": 2,
+            "if (toString.call(object[index]) == funcClass) result.push(index)": 5,
+            "  if (source) {": 7,
+            "  }\n": 8,
+            "result = []": 5,
+            "result[index] = callback(collection[index], index, collection)": 5,
+            "result.push(callback(collection[index], index, collection))": 5,
+            ", index)": 5,
+            ")) == null ? '' : _.escape(__t)) +\n'": 4,
+            "if (object[index] == undefined)": 5,
+            "if (!objectTypes[typeof object] || object === null) throw TypeError()": 5,
+            "hasOwnProperty.call(": 5,
+            " == null) return result": 0,
+            "index in ": 6,
+            "'+\n((__t = (": 5,
+            "result[index] = collection[index][property]": 4,
+            "result.push(collection[index][property])": 4,
+            "result = callback(result, collection[index], index, collection)": 5,
+            "result = noaccum\n  ? (noaccum = false, collection[index])\n  : callback(result, collection[index], index, collection)": 5,
+            "result[index] = collection[index]": 3,
+            "result.push(collection[index])": 3,
+            "__p='": 5,
+            "if (": 0,
+            ") {\nvar __p, __t, __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n": 5,
+            "++index < length": 5,
+            "\"use strict\"; return function(": 7,
+            " || {}) {\n": 5
+        },
+        "numbers": {
+            "50000": 0
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.1.0": {
+        "stringLiterals": {
+            "1.1.0": 0,
+            "object, source, guard": 8,
+            "var args = arguments,\n    argsIndex = 0,\n    argsLength = typeof guard == 'number' ? 2 : args.length;\nwhile (++argsIndex < argsLength) {\n  iterable = args[argsIndex];\n  if (iterable && objectTypes[typeof iterable]) {": 4,
+            "if (typeof result[index] == 'undefined') result[index] = iterable[index]": 4,
+            "callback = callback && typeof thisArg == 'undefined' ? callback : lodash.createCallback(callback, thisArg)": 1,
+            "if (callback(iterable[index], index, collection) === false) return result": 4,
+            "if (!objectTypes[typeof iterable]) return result;\n": 4,
+            "hasOwnProperty, isArguments, isArray, isString, keys, lodash, objectTypes": 1,
+            "if (!(objectTypes[typeof object])) return result": 1,
+            "result[index] = callback ? callback(result[index], iterable[index]) : iterable[index]": 4,
+            ";": 4,
+            ";\nif (argsLength > 3 && typeof args[argsLength - 2] == 'function') {\n  var callback = lodash.createCallback(args[--argsLength - 1], args[argsLength--], 2);\n} else if (argsLength > 2 && typeof args[argsLength - 1] == 'function') {\n  callback = args[--argsLength];\n}": 1,
+            "isArray(iterable)": 4,
+            "iterable": 1,
+            "__wrapped__ ": 9,
+            ";\nreturn result": 4,
+            ";\nif (!iterable) return result;\n": 1,
+            "\n  }\n}\nelse {  ": 4,
+            "\n  }  ": 4,
+            "\n  for (index in iterable) {": 4,
+            "\n/*\n//@ sourceURL=": 8,
+            "\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iterable] ? keys(iterable) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    ": 1,
+            ";    ": 4,
+            "\n    }": 4,
+            ", result = ": 1,
+            ") {\n  while (++index < length) {\n    ": 4,
+            "\n    if (": 4,
+            ") {    ": 4,
+            "var index, iterable = ": 4,
+            "var length = iterable.length; index = -1;\nif (": 4,
+            "hasOwnProperty.call(iterable, index)": 4
+        },
+        "numbers": {
+            "100": 5
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.0.0-rc.3": {
+        "stringLiterals": {
+            "<% if (obj.useStrict) { %>'use strict';\n<% } %>var index, iteratee = <%= firstArg %>, result = <%= firstArg %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayLoop) { %>var length = iteratee.length; index = -1;\nif (typeof length == 'number') {  <% if (noCharByIndex) { %>\n  if (isString(iteratee)) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  while (++index < length) {\n    <%= arrayLoop %>\n  }\n}\nelse {  <%  } else if (nonEnumArgs) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      index += '';\n      <%= objectLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    <%= objectLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    <%= objectLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    <%= objectLoop %>\n  }    <% } %>  <% } %>  <% if (arrayLoop || nonEnumArgs) { %>\n}<% } %>\n<%= bottom %>;\nreturn result": 0,
+            "1.0.0-rc.3": 0,
+            "object, source, guard": 8,
+            "for (var argsIndex = 1, argsLength = typeof guard == 'number' ? 2 : arguments.length; argsIndex < argsLength; argsIndex++) {\n  if ((iteratee = arguments[argsIndex])) {": 3,
+            "result[index] = iteratee[index]": 5,
+            "callback = callback && typeof thisArg == 'undefined' ? callback : createCallback(callback, thisArg)": 5,
+            "if (callback(iteratee[index], index, collection) === false) return result": 2,
+            "createCallback, hasOwnProperty, isArguments, isString, objectTypes, nativeKeys, propertyIsEnumerable": 4,
+            "\n//@ sourceURL=": 6
+        },
+        "numbers": {
+            "100": 5
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.6.1": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length > -1 && length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;\n    <% if (!hasDontEnumBug || useHas) { %>}\n<% } %>  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 1,
+            "0.6.1": 0,
+            "var prop;\nif (typeof callback != 'function') {\n  var valueProp = callback;\n  callback = function(value) { return value[valueProp] }\n}\nelse if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 6,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop]++ : result[prop] = 1)": 6,
+            "object, callback, thisArg": 5,
+            "var isFunc = typeof callback == 'function';\nif (!isFunc) {\n  var props = concat.apply(ArrayProto, arguments)\n} else if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 2,
+            "if (isFunc\n  ? !callback(value, index, object)\n  : indexOf(props, index) < 0\n) result[index] = value": 5,
+            "if (!callback(value, index, collection)) return !result": 9,
+            "callback(value, index, collection) && result.push(value)": 9,
+            "arrayLikeClasses, ArrayProto, bind, compareAscending, concat, forIn, hasOwnProperty, identity, indexOf, isArguments, isArray, isFunction, isPlainObject, iteratorBind, objectClass, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString": 5,
+            "%>": 9,
+            "if (isFunction(value)) result.push(index)": 7,
+            "object, source, indicator, stack": 5,
+            "var destValue, found, isArr, stackLength, recursive = indicator == isPlainObject;\nif (!recursive) stack = [];\nfor (var argsIndex = 1, argsLength = recursive ? 2 : arguments.length; argsIndex < argsLength; argsIndex++) {\n  if (iteratee = arguments[argsIndex]) {": 5,
+            "if (value && ((isArr = isArray(value)) || isPlainObject(value))) {\n  found = false; stackLength = stack.length;\n  while (stackLength--) {\n    if (found = stack[stackLength].source == value) break\n  }\n  if (found) {\n    result[index] = stack[stackLength].value\n  } else {\n    destValue = (destValue = result[index]) && isArr\n      ? (isArray(destValue) ? destValue : [])\n      : (isPlainObject(destValue) ? destValue : {});\n    stack.push({ value: destValue, source: value });\n    result[index] = callee(destValue, value, isPlainObject, stack)\n  }\n} else if (value != null) {\n  result[index] = value\n}": 5,
+            "if (typeof callback != 'function') {\n  var prop,\n      props = concat.apply(ArrayProto, arguments),\n      length = props.length;\n  for (index = 1; index < length; index++) {\n    prop = props[index];\n    if (prop in object) result[prop] = object[prop]\n  }\n} else {\n  if (thisArg) callback = iteratorBind(callback, thisArg)": 2,
+            "if (callback(value, index, object)) result[index] = value": 5,
+            "result.push(value)": 9,
+            "if (value === target) return true": 9,
+            "if (callback(value, index, collection)) return value": 9,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(value)": 6,
+            "collection, properties": 9,
+            "var props = [];\nforIn(properties, function(value, prop) { props.push(prop) });\nvar propsLength = props.length": 5,
+            "for (var prop, pass = true, propIndex = 0; propIndex < propsLength; propIndex++) {\n  prop = props[propIndex];\n  if (!(pass = value[prop] === properties[prop])) break\n}\npass && result.push(value)": 4,
+            "var funcs = arguments,\n    length = funcs.length;\nif (length > 1) {\n  for (var index = 1; index < length; index++) {\n    result[funcs[index]] = bind(result[funcs[index]], result)\n  }\n  return result\n}": 7,
+            "if (isFunction(result[index])) {\n  result[index] = bind(result[index], result)\n}": 6,
+            "result[index] = callback(value, index, collection)": 9,
+            "\n};\nreturn callee": 9,
+            "<e%-": 9,
+            "<e%=": 9,
+            " ||\n  (className == objectClass && length > -1 && length === length >>> 0 &&\n  isFunction(value.splice))) return !length": 5,
+            "(callback(value, index, collection))": 9,
+            "var className = toString.call(value),\n    length = value.length;\nif (arrayLikeClasses[className]": 7,
+            "if (toString.call(collection) == stringClass) return collection.indexOf(target) > -1": 5,
+            "result[index] = (isFunc ? methodName : value[methodName]).apply(value, args)": 9,
+            "result[index] = value[property]": 9,
+            "if (noaccum) result = iteratee[++index]": 5,
+            "result = callback(result, value, index, collection)": 9,
+            "result = noaccum\n  ? (noaccum = false, value)\n  : callback(result, value, index, collection)": 9,
+            "result[index] = {\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n}": 8,
+            " || isArguments(value)": 9,
+            "((isFunc ? methodName : value[methodName]).apply(value, args))": 9,
+            "(value[property])": 9,
+            "({\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n})": 8,
+            "[ownIndex] = ": 9,
+            "var callee = function(": 9,
+            "<e%-([\\s\\S]+?)%>|<e%=([\\s\\S]+?)%>": 6
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.12.0": {
+        "stringLiterals": {
+            "4.12.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "100": 6
+        }
+    },
+    "4.8.1": {
+        "stringLiterals": {
+            "4.8.0": 1
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "88": 8
+        }
+    },
+    "4.0.1": {
+        "stringLiterals": {
+            "4.0.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.4.0": {
+        "stringLiterals": {
+            "var result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\nvar index, iteratee = <%= iteratee %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {<% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var props = nativeKeys(iteratee),\n      propIndex = -1,\n      length = props.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++propIndex < length) {\n    index = props[propIndex];\n    if (!(skipProto && index == 'prototype')) {\n      <%= objectBranch.inLoop %>\n    }\n  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 1,
+            "0.4.0": 0,
+            "callback(iteratee[index], index, collection)": 2,
+            "if (!callback(iteratee[index], index, collection)) return !result": 2,
+            "source": 1,
+            "result[index] = iteratee[index]": 5,
+            "callback(iteratee[index], index, collection) && result.push(iteratee[index])": 2,
+            "for (var source, sourceIndex = 1, length = arguments.length; sourceIndex < length; sourceIndex++) {\n  source = arguments[sourceIndex];\n": 7,
+            "arrayClass, compareAscending, funcClass, hasOwnProperty, identity, iteratorBind, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString": 1,
+            "if (!(object && objectTypes[typeof object])) throw TypeError()": 5,
+            "%>": 9,
+            "if (iteratee[index] === target) return true": 2,
+            "if (callback(iteratee[index], index, collection)) return iteratee[index]": 2,
+            "var prop, isFunc = typeof callback == 'function';\nif (isFunc && thisArg) callback = iteratorBind(callback, thisArg)": 2,
+            "prop = isFunc\n  ? callback(iteratee[index], index, collection)\n  : iteratee[index][callback];\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(iteratee[index])": 2,
+            "if (typeof callback == 'string') {\n  var prop = callback;\n  callback = function(collection) { return collection[prop] }\n}\nelse if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 2,
+            "if (toString.call(iteratee[index]) == funcClass) result.push(index)": 2,
+            "var className = toString.call(value);\nif (className == arrayClass || className == stringClass) return !value.length": 8,
+            "result.push(iteratee[index])": 2,
+            "  if (source) {": 7,
+            "  }\n": 8,
+            "result[index] = callback(iteratee[index], index, collection)": 2,
+            "noCharByIndex": 6,
+            "<e%-": 9,
+            "<e%=": 9,
+            "(callback(iteratee[index], index, collection))": 2,
+            "if (toString.call(iteratee) == stringClass) return collection.indexOf(target) > -1": 6,
+            "result[index] = (isFunc ? methodName : iteratee[index][methodName]).apply(iteratee[index], args)": 2,
+            "result[index] = iteratee[index][property]": 2,
+            "result = callback(result, iteratee[index], index, collection)": 2,
+            "result = noaccum\n  ? (noaccum = false, iteratee[index])\n  : callback(result, iteratee[index], index, collection)": 2,
+            "result[index] = {\n  criteria: callback(iteratee[index], index, collection),\n  value: iteratee[index]\n}": 2,
+            "__p = '": 0,
+            "((isFunc ? methodName : iteratee[index][methodName]).apply(iteratee[index], args))": 2,
+            "(iteratee[index][property])": 2,
+            "({\n  criteria: callback(iteratee[index], index, collection),\n  value: iteratee[index]\n})": 2,
+            "__with": 0,
+            "}__": 0,
+            "[propIndex] = ": 2,
+            "\"use strict\"; return function(": 7,
+            "' +\n__we(": 0,
+            ")) == null ? '' : __wt) +\n'": 0,
+            "|<e%-([\\s\\S]+?)%>|<e%=([\\s\\S]+?)%>": 2,
+            ", __e = _.escape, __we = __e": 0,
+            "' +\n((__wt = (": 0,
+            "($^)": 2,
+            "\n}__\n__p += '": 0,
+            "__p += ": 0,
+            "';\n__with (": 0,
+            "([(\\s])": 0,
+            " = {});\nvar __p, __t, __wt, __d = ": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.5.1": {
+        "stringLiterals": {
+            "4.5.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.11.0": {
+        "stringLiterals": {
+            "4.11.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "88": 8
+        }
+    },
+    "1.2.1": {
+        "stringLiterals": {
+            "1.2.1": 0,
+            "__wrapped__ ": 9,
+            "\n/*\n//@ sourceURL=": 8
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.4": {
+        "stringLiterals": {
+            "\\d*(?:(?:1ST|2ND|3RD|(?![123])\\dTH)\\b)": 6,
+            "\\d*(?:(?:1st|2nd|3rd|(?![123])\\dth)\\b)": 6,
+            "4.17.4": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.2.2": {
+        "stringLiterals": {
+            "var index, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = <%= firstArg %>.length; index = -1;  <% if (objectBranch) { %>\nif (length === +length) {<% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (<%= arrayBranch.loopExp %>) {\n    <%= arrayBranch.inLoop %>;\n  }  <% if (objectBranch) { %>\n}\n<% }}if (objectBranch) {  if (arrayBranch) { %>else {\n<% }  if (!hasDontEnumBug) { %>  var skipProto = typeof <%= iteratedObject %> == 'function';\n<% } %>  <%= objectBranch.beforeLoop %>;\n  for (<%= objectBranch.loopExp %>) {  \n<%  if (hasDontEnumBug) {    if (useHas) { %>    if (<%= hasExp %>) {\n  <% } %>    <%= objectBranch.inLoop %>;<%    if (useHas) { %>\n    }<% }  }  else {  %>    if (!(skipProto && index == 'prototype')<% if (useHas) { %> && <%= hasExp %><% } %>) {\n      <%= objectBranch.inLoop %>;\n    }  <% } %>\n  }  <% if (hasDontEnumBug) { %>\n  var ctor = <%= iteratedObject %>.constructor;\n  <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === <%= iteratedObject %>) && <%      } %><%= hasExp %>) {\n    <%= objectBranch.inLoop %>;\n  }<%     }   }   if (arrayBranch) { %>\n}<% }} %>\n<%= bottom %>;\nreturn result": 2,
+            "0.2.2": 0,
+            "if (!callback) {\n  callback = identity\n}\nelse if (thisArg) {\n  callback = bind(callback, thisArg)\n}": 2,
+            "callback(collection[index], index, collection)": 5,
+            "if (!callback(collection[index], index, collection)) return !result": 5,
+            "index in source": 6,
+            "object[index] = source[index]": 5,
+            "callback(collection[index], index, collection) && result.push(collection[index])": 5,
+            "if (thisArg) callback = bind(callback, thisArg)": 2,
+            "for (var source, sourceIndex = 1, length = arguments.length; sourceIndex < length; sourceIndex++) {\n  source = arguments[sourceIndex];\n": 7,
+            "arrayClass, bind, funcClass, hasOwnProperty, identity, objectTypes, stringClass, toString, undefined": 1,
+            "if (collection[index] === target) return true": 5,
+            "if (callback(collection[index], index, collection)) return collection[index]": 5,
+            "var noaccum = arguments.length < 3;\nif (thisArg) callback = bind(callback, thisArg)": 2,
+            "if (toString.call(object[index]) == funcClass) result.push(index)": 5,
+            "var className = toString.call(value);\nif (className == arrayClass || className == stringClass) return !value.length": 8,
+            "  if (source) {": 7,
+            "  }\n": 8,
+            "result = []": 5,
+            "result[index] = callback(collection[index], index, collection)": 5,
+            "result.push(callback(collection[index], index, collection))": 5,
+            ", index)": 5,
+            ")) == null ? '' : _.escape(__t)) +\n'": 4,
+            "if (object[index] == undefined)": 5,
+            "if (!objectTypes[typeof object] || object === null) throw TypeError()": 5,
+            "hasOwnProperty.call(": 5,
+            "index in ": 6,
+            "'+\n((__t = (": 5,
+            "result[index] = collection[index][property]": 4,
+            "result.push(collection[index][property])": 4,
+            "result = callback(result, collection[index], index, collection)": 5,
+            "result = noaccum\n  ? (noaccum = false, collection[index])\n  : callback(result, collection[index], index, collection)": 5,
+            "result[index] = collection[index]": 3,
+            "result.push(collection[index])": 3,
+            "__p='": 5,
+            ") {\nvar __p, __t, __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n": 5,
+            "++index < length": 5,
+            "\"use strict\"; return function(": 7,
+            " || {}) {\n": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.10.1": {
+        "stringLiterals": {
+            "isArray": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.5.0-rc.1": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = nativeKeys(iteratee),\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    if (!(skipProto && index == 'prototype')) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }\n  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.5.0-rc.1": 0,
+            "var prop;\nif (typeof callback != 'function') {\n  var valueProp = callback;\n  callback = function(value) { return value[valueProp] }\n}\nelse if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 6,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop]++ : result[prop] = 1)": 6,
+            "if (!callback(value, index, collection)) return !result": 9,
+            "callback(value, index, collection) && result.push(value)": 9,
+            "arrayLikeClasses, ArrayProto, bind, compareAscending, concat, forIn, funcClass, hasOwnProperty, identity, indexOf, isArguments, isArray, isPlainObject, iteratorBind, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString": 0,
+            "%>": 9,
+            "var props = concat.apply(ArrayProto, arguments)": 3,
+            "if (indexOf(props, index) < 0) result[index] = value": 3,
+            "if (toString.call(value) == funcClass) result.push(index)": 0,
+            "if (!(object && objectTypes[typeof object])) throw TypeError()": 5,
+            "result.push(value)": 9,
+            "if (value === target) return true": 9,
+            "if (callback(value, index, collection)) return value": 9,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(value)": 6,
+            "object, source, indicator, stack": 5,
+            "var destValue, found, isArr, stackLength, recursive = indicator == isPlainObject;\nif (!recursive) stack = [];\nfor (var argsIndex = 1, argsLength = recursive ? 2 : arguments.length; argsIndex < argsLength; argsIndex++) {\n  if (iteratee = arguments[argsIndex]) {": 5,
+            "if (value && ((isArr = isArray(value)) || isPlainObject(value))) {\n  found = false; stackLength = stack.length;\n  while (stackLength--) {\n    if (found = stack[stackLength].source == value) break\n  }\n  if (found) {\n    result[index] = stack[stackLength].value\n  } else {\n    destValue = (destValue = result[index]) && isArr\n      ? (isArray(destValue) ? destValue : [])\n      : (isPlainObject(destValue) ? destValue : {});\n    stack.push({ value: destValue, source: value });\n    result[index] = callee(destValue, value, isPlainObject, stack)\n  }\n} else if (value != null) {\n  result[index] = value\n}": 5,
+            "collection, properties": 9,
+            "var pass, prop, propIndex, props = [];\nforIn(properties, function(value, prop) { props.push(prop) });\nvar propsLength = props.length": 3,
+            "for (pass = true, propIndex = 0; propIndex < propsLength; propIndex++) {\n  prop = props[propIndex];\n  if (!(pass = value[prop] === properties[prop])) break\n}\nif (pass) result.push(value)": 3,
+            "var funcs = arguments,\n    length = funcs.length;\nif (length > 1) {\n  for (var index = 1; index < length; index++)\n    result[funcs[index]] = bind(result[funcs[index]], result);\n  return result\n}": 1,
+            "if (toString.call(result[index]) == funcClass) result[index] = bind(result[index], result)": 1,
+            "result[index] = callback(value, index, collection)": 9,
+            "noCharByIndex": 6,
+            "\n};\nreturn callee": 9,
+            "<e%-": 9,
+            "<e%=": 9,
+            ") return !value.length": 0,
+            "//@cc_on !": 4,
+            "(callback(value, index, collection))": 9,
+            "if (arrayLikeClasses[toString.call(value)]": 0,
+            "if (toString.call(iteratee) == stringClass) return collection.indexOf(target) > -1": 6,
+            "result[index] = (isFunc ? methodName : value[methodName]).apply(value, args)": 9,
+            "result[index] = value[property]": 9,
+            "result = callback(result, value, index, collection)": 9,
+            "result = noaccum\n  ? (noaccum = false, value)\n  : callback(result, value, index, collection)": 9,
+            "result[index] = {\n  criteria: callback(value, index, collection),\n  value: value\n}": 0,
+            " || isArguments(value)": 9,
+            "((isFunc ? methodName : value[methodName]).apply(value, args))": 9,
+            "(value[property])": 9,
+            "({\n  criteria: callback(value, index, collection),\n  value: value\n})": 0,
+            "[ownIndex] = ": 9,
+            "var callee = function(": 9,
+            "<e%-([\\s\\S]+?)%>|<e%=([\\s\\S]+?)%>": 6,
+            " = {});\nvar __t, __p = '', __e = _.escape": 4
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.0.0-rc.1": {
+        "stringLiterals": {
+            "<% if (obj.useStrict) { %>'use strict';\n<% } %>var index, iteratee = <%= firstArg %>, result = <%= firstArg %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayLoop) { %>var length = iteratee.length; index = -1;\nif (typeof length == 'number') {  <% if (noCharByIndex) { %>\n  if (isString(iteratee)) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  while (++index < length) {\n    <%= arrayLoop %>\n  }\n}\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      index += '';\n      <%= objectLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    <%= objectLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    <%= objectLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    <%= objectLoop %>\n  }    <% } %>  <% } %>  <% if (arrayLoop || noArgsEnum) { %>\n}<% } %>\n<%= bottom %>;\nreturn result": 1,
+            "1.0.0-rc.1": 0,
+            "object, source, guard": 8,
+            "for (var argsIndex = 1, argsLength = typeof guard == 'number' ? 2 : arguments.length; argsIndex < argsLength; argsIndex++) {\n  if ((iteratee = arguments[argsIndex])) {": 3,
+            "result[index] = iteratee[index]": 5,
+            "callback = callback && typeof thisArg == 'undefined' ? callback : createCallback(callback, thisArg)": 5,
+            "if (callback(iteratee[index], index, collection) === false) return result": 2,
+            "first": 0,
+            "1": 1,
+            "\n})": 1,
+            "createCallback, hasOwnProperty, isArguments, isString, objectTypes, nativeKeys, propertyIsEnumerable": 4,
+            "\n//@ sourceURL=": 6,
+            ") {": 1,
+            "(function(": 1
+        },
+        "numbers": {
+            "74": 3
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.3.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.2.0": {
+        "stringLiterals": {
+            "4.2.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.17": {
+        "stringLiterals": {
+            "4.17.17": 0,
+            "variable": 9
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.3.0": {
+        "stringLiterals": {
+            "var index, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = <%= firstArg %>.length; index = -1;  <% if (objectBranch) { %>\nif (length === length >>> 0) {<% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (<%= arrayBranch.loopExp %>) {\n    <%= arrayBranch.inLoop %>;\n  }  <% if (objectBranch) { %>\n}\n<% }}if (objectBranch) {  if (arrayBranch) { %>else {\n<% }  if (!hasDontEnumBug) { %>  var skipProto = typeof <%= iteratedObject %> == 'function';\n<% } %>  <%= objectBranch.beforeLoop %>;\n  for (<%= objectBranch.loopExp %>) {  \n<%  if (hasDontEnumBug) {    if (useHas) { %>    if (<%= hasExp %>) {\n  <% } %>    <%= objectBranch.inLoop %>;<%    if (useHas) { %>\n    }<% }  }  else {  %>    if (!(skipProto && index == 'prototype')<% if (useHas) { %> && <%= hasExp %><% } %>) {\n      <%= objectBranch.inLoop %>;\n    }  <% } %>\n  }  <% if (hasDontEnumBug) { %>\n  var ctor = <%= iteratedObject %>.constructor;\n  <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === <%= iteratedObject %>) && <%      } %><%= hasExp %>) {\n    <%= objectBranch.inLoop %>;\n  }<%     }   }   if (arrayBranch) { %>\n}<% }} %>\n<%= bottom %>;\nreturn result": 2,
+            "0.3.0": 0,
+            "callback(collection[index], index, collection)": 5,
+            "if (!callback(collection[index], index, collection)) return !result": 5,
+            "index in source": 6,
+            "object[index] = source[index]": 5,
+            "callback(collection[index], index, collection) && result.push(collection[index])": 5,
+            "for (var source, sourceIndex = 1, length = arguments.length; sourceIndex < length; sourceIndex++) {\n  source = arguments[sourceIndex];\n": 7,
+            "arrayClass, funcClass, hasOwnProperty, identity, iteratorBind, objectTypes, stringClass, toString, undefined": 1,
+            "if (!objectTypes[typeof object] || object === null) throw TypeError()": 5,
+            "if (collection[index] === target) return true": 5,
+            "if (callback(collection[index], index, collection)) return collection[index]": 5,
+            "if (toString.call(object[index]) == funcClass) result.push(index)": 5,
+            "var className = toString.call(value);\nif (className == arrayClass || className == stringClass) return !value.length": 8,
+            "  if (source) {": 7,
+            "  }\n": 8,
+            "result = []": 5,
+            "result[index] = callback(collection[index], index, collection)": 5,
+            "result.push(callback(collection[index], index, collection))": 5,
+            ", index)": 5,
+            ")) == null ? '' : _.escape(__t)) +\n'": 4,
+            "if (object[index] == undefined)": 5,
+            "]\n": 1,
+            "hasOwnProperty.call(": 5,
+            "index in ": 6,
+            "'+\n((__t = (": 5,
+            "result[index] = collection[index][property]": 4,
+            "result.push(collection[index][property])": 4,
+            "result = callback(result, collection[index], index, collection)": 5,
+            "result = noaccum\n  ? (noaccum = false, collection[index])\n  : callback(result, collection[index], index, collection)": 5,
+            "result[index] = collection[index]": 3,
+            "result.push(collection[index])": 3,
+            "__p='": 5,
+            "return __p\n}\n//@ sourceURL=/lodash/template/source[": 1,
+            "++index < length": 5,
+            "\"use strict\"; return function(": 7,
+            " || {}) {\n": 5,
+            ") {\nvar __p, __t, __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.3.1": {
+        "stringLiterals": {
+            "var index, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = <%= firstArg %>.length; index = -1;  <% if (objectBranch) { %>\nif (length === length >>> 0) {<% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (<%= arrayBranch.loopExp %>) {\n    <%= arrayBranch.inLoop %>;\n  }  <% if (objectBranch) { %>\n}\n<% }}if (objectBranch) {  if (arrayBranch) { %>else {\n<% }  if (!hasDontEnumBug) { %>  var skipProto = typeof <%= iteratedObject %> == 'function';\n<% } %>  <%= objectBranch.beforeLoop %>;\n  for (<%= objectBranch.loopExp %>) {  \n<%  if (hasDontEnumBug) {    if (useHas) { %>    if (<%= hasExp %>) {\n  <% } %>    <%= objectBranch.inLoop %>;<%    if (useHas) { %>\n    }<% }  }  else {  %>    if (!(skipProto && index == 'prototype')<% if (useHas) { %> && <%= hasExp %><% } %>) {\n      <%= objectBranch.inLoop %>;\n    }  <% } %>\n  }  <% if (hasDontEnumBug) { %>\n  var ctor = <%= iteratedObject %>.constructor;\n  <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === <%= iteratedObject %>) && <%      } %><%= hasExp %>) {\n    <%= objectBranch.inLoop %>;\n  }<%     }   }   if (arrayBranch) { %>\n}<% }} %>\n<%= bottom %>;\nreturn result": 2,
+            "0.3.1": 0,
+            "callback(collection[index], index, collection)": 5,
+            "if (!callback(collection[index], index, collection)) return !result": 5,
+            "index in source": 6,
+            "object[index] = source[index]": 5,
+            "callback(collection[index], index, collection) && result.push(collection[index])": 5,
+            "for (var source, sourceIndex = 1, length = arguments.length; sourceIndex < length; sourceIndex++) {\n  source = arguments[sourceIndex];\n": 7,
+            "arrayClass, funcClass, hasOwnProperty, identity, iteratorBind, objectTypes, stringClass, toString, undefined": 1,
+            "if (!objectTypes[typeof object] || object === null) throw TypeError()": 5,
+            "if (collection[index] === target) return true": 5,
+            "if (callback(collection[index], index, collection)) return collection[index]": 5,
+            "if (toString.call(object[index]) == funcClass) result.push(index)": 5,
+            "var className = toString.call(value);\nif (className == arrayClass || className == stringClass) return !value.length": 8,
+            "result.push(object[index])": 1,
+            "  if (source) {": 7,
+            "  }\n": 8,
+            ", index)": 5,
+            ")) == null ? '' : _.escape(__t)) +\n'": 4,
+            "if (object[index] == undefined)": 5,
+            "]\n": 1,
+            "hasOwnProperty.call(": 5,
+            "index in ": 6,
+            "'+\n((__t = (": 5,
+            "result = []": 5,
+            "result[index] = callback(collection[index], index, collection)": 5,
+            "result.push(callback(collection[index], index, collection))": 5,
+            "result = callback(result, collection[index], index, collection)": 5,
+            "result = noaccum\n  ? (noaccum = false, collection[index])\n  : callback(result, collection[index], index, collection)": 5,
+            "__p='": 5,
+            "return __p\n}\n//@ sourceURL=/lodash/template/source[": 1,
+            "++index < length": 5,
+            "\"use strict\"; return function(": 7,
+            " || {}) {\n": 5,
+            ") {\nvar __p, __t, __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.7.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.9.0": {
+        "stringLiterals": {
+            "<% if (obj.useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result = <%= firstArg %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayLoop) { %>var length = iteratee.length; index = -1;\nif (typeof length == 'number') {  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayLoop %>\n  }\n}\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectLoop %>\n  }    <% } %>  <% } %>  <% if (arrayLoop || noArgsEnum) { %>\n}<% } %>\n<%= bottom %>;\nreturn result": 1,
+            "0.9.0": 0,
+            "callback = createCallback(callback, thisArg)": 6,
+            "createCallback, hasOwnProperty, isArguments, objectTypes, nativeKeys, propertyIsEnumerable, stringClass, toString": 1,
+            "\n//@ sourceURL=": 6
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.6.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.0.1": {
+        "stringLiterals": {
+            "1.0.1": 0,
+            "object, source, guard": 8,
+            "var args = arguments,\n    argsIndex = 0,\n    argsLength = typeof guard == 'number' ? 2 : args.length;\nwhile (++argsIndex < argsLength) {\n  iterable = args[argsIndex];\n  if (iterable && objectTypes[typeof iterable]) {": 4,
+            "if (typeof result[index] == 'undefined') result[index] = iterable[index]": 4,
+            "callback = callback && typeof thisArg == 'undefined' ? callback : createCallback(callback, thisArg)": 5,
+            "typeof length == 'number'": 2,
+            "if (callback(iterable[index], index, collection) === false) return result": 4,
+            "if (!objectTypes[typeof iterable]) return result;\n": 4,
+            "createCallback, hasOwnProperty, isArguments, isArray, isString, objectTypes, nativeKeys": 2,
+            "result[index] = callback ? callback(result[index], iterable[index]) : iterable[index]": 4,
+            ";": 4,
+            ";\nif (argsLength > 3 && typeof args[argsLength - 2] == 'function') {\n  var callback = createCallback(args[--argsLength - 1], args[argsLength--], 2);\n} else if (argsLength > 2 && typeof args[argsLength - 1] == 'function') {\n  callback = args[--argsLength];\n}": 1,
+            "isArray(iterable)": 4,
+            ";\nreturn result": 4,
+            ", result = iterable;\nif (!iterable) return result;\n": 2,
+            "\n  }\n}\nelse {  ": 4,
+            "\n  }  ": 4,
+            "\n  for (index in iterable) {": 4,
+            "\n/*\n//@ sourceURL=": 8,
+            "var index, iterable = ": 4,
+            "\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iterable] ? nativeKeys(iterable) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    ": 2,
+            ";    ": 4,
+            "\n    }": 4,
+            ") {\n  while (++index < length) {\n    ": 4,
+            "\n    if (": 4,
+            ") {    ": 4,
+            "var length = iterable.length; index = -1;\nif (": 4,
+            "hasOwnProperty.call(iterable, index)": 4
+        },
+        "numbers": {
+            "100": 5
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.4.1": {
+        "stringLiterals": {
+            "var result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\nvar index, iteratee = <%= iteratee %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {<% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var props = nativeKeys(iteratee),\n      propIndex = -1,\n      length = props.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++propIndex < length) {\n    index = props[propIndex];\n    if (!(skipProto && index == 'prototype')) {\n      <%= objectBranch.inLoop %>\n    }\n  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 1,
+            "0.4.1": 0,
+            "callback(iteratee[index], index, collection)": 2,
+            "if (!callback(iteratee[index], index, collection)) return !result": 2,
+            "source": 1,
+            "result[index] = iteratee[index]": 5,
+            "callback(iteratee[index], index, collection) && result.push(iteratee[index])": 2,
+            "for (var source, sourceIndex = 1, length = arguments.length; sourceIndex < length; sourceIndex++) {\n  source = arguments[sourceIndex];\n": 7,
+            "arrayClass, compareAscending, funcClass, hasOwnProperty, identity, iteratorBind, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString": 1,
+            "if (!(object && objectTypes[typeof object])) throw TypeError()": 5,
+            "%>": 9,
+            "if (iteratee[index] === target) return true": 2,
+            "if (callback(iteratee[index], index, collection)) return iteratee[index]": 2,
+            "var prop, isFunc = typeof callback == 'function';\nif (isFunc && thisArg) callback = iteratorBind(callback, thisArg)": 2,
+            "prop = isFunc\n  ? callback(iteratee[index], index, collection)\n  : iteratee[index][callback];\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(iteratee[index])": 2,
+            "if (typeof callback == 'string') {\n  var prop = callback;\n  callback = function(collection) { return collection[prop] }\n}\nelse if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 2,
+            "if (toString.call(iteratee[index]) == funcClass) result.push(index)": 2,
+            "var className = toString.call(value);\nif (className == arrayClass || className == stringClass) return !value.length": 8,
+            "result.push(iteratee[index])": 2,
+            "  if (source) {": 7,
+            "  }\n": 8,
+            "result[index] = callback(iteratee[index], index, collection)": 2,
+            "noCharByIndex": 6,
+            "<e%-": 9,
+            "<e%=": 9,
+            "(callback(iteratee[index], index, collection))": 2,
+            "if (toString.call(iteratee) == stringClass) return collection.indexOf(target) > -1": 6,
+            "result[index] = (isFunc ? methodName : iteratee[index][methodName]).apply(iteratee[index], args)": 2,
+            "result[index] = iteratee[index][property]": 2,
+            "result = callback(result, iteratee[index], index, collection)": 2,
+            "result = noaccum\n  ? (noaccum = false, iteratee[index])\n  : callback(result, iteratee[index], index, collection)": 2,
+            "result[index] = {\n  criteria: callback(iteratee[index], index, collection),\n  value: iteratee[index]\n}": 2,
+            "((isFunc ? methodName : iteratee[index][methodName]).apply(iteratee[index], args))": 2,
+            "(iteratee[index][property])": 2,
+            "({\n  criteria: callback(iteratee[index], index, collection),\n  value: iteratee[index]\n})": 2,
+            "[propIndex] = ": 2,
+            "\"use strict\"; return function(": 7,
+            "|<e%-([\\s\\S]+?)%>|<e%=([\\s\\S]+?)%>": 2,
+            " = {});\nvar __t, __p = '', __e = _.escape": 4,
+            "($^)": 2
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.10": {
+        "stringLiterals": {
+            "4.17.10": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.15.0": {
+        "stringLiterals": {
+            "4.15.0": 0,
+            "This method is not supported with core-js. Try https://github.com/es-shims.": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "100": 6
+        }
+    },
+    "0.1.0": {
+        "stringLiterals": {
+            "array": 0,
+            "var values=concat.apply([],slice.call(arguments,1))": 0,
+            "if(indexOf(values,array[index])<0)result.push(array[index])": 0,
+            "if(!callback(collection[index],index,collection))return !result": 0,
+            "for(var source,j=1,length=arguments.length;j<length;j++){\nsource=arguments[j]": 0,
+            "index in source": 6,
+            "object[index]=source[index]": 0,
+            "callback(collection[index],index,collection)&&result.push(collection[index])": 0,
+            "collection,callback,thisArg": 0,
+            "if(!callback){\ncallback=identity\n}\nelse if(thisArg){\ncallback=bind(callback,thisArg)\n}": 0,
+            "callback(collection[index],index,collection)": 0,
+            "if(object!==Object(object))throw TypeError()": 0,
+            "var current,result=-Infinity,computed=result;\nif(!callback){\nif(isArray(collection)&&collection[0]===+collection[0])return Math.max.apply(Math,collection);\nif(isEmpty(collection))return result;\n}else if(thisArg)callback=bind(callback,thisArg)": 0,
+            "current=callback?callback(collection[index],index,collection):collection[index];\nif(current>=computed)computed=current,result=collection[index]": 0,
+            "&#x2F;": 2,
+            "objects": 0,
+            "var className=toString.call(value)": 0,
+            "if(className==arrayClass||className==stringClass)return !value.length": 0,
+            "arrayClass,bind,concat,funcClass,hasOwnProperty,identity,indexOf,Infinity,isArray,isEmpty,Math,slice,stringClass,toString,undefined": 0,
+            "collection,target": 0,
+            "if(collection[index]===target)return true": 0,
+            "if(callback(collection[index],index,collection))return collection[index]": 0,
+            "collection,property": 0,
+            "collection,callback,accumulator,thisArg": 0,
+            "var initial=arguments.length>2;\nif(thisArg)callback=bind(callback,thisArg)": 0,
+            "if(array[index])result.push(array[index])": 0,
+            "var values=slice.call(arguments,1)": 0,
+            "if(toString.call(object[index])==funcClass)result.push(index)": 0,
+            "0.1.0": 0,
+            "result=Array(length)": 0,
+            "result=[]": 0,
+            "result[index]=callback(collection[index],index,collection)": 0,
+            "result[result.length]=callback(collection[index],index,collection)": 0,
+            "beforeLoop": 0,
+            "loopExp": 0,
+            "inLoop": 0,
+            "afterLoop": 0,
+            "max": 0,
+            "min": 0,
+            ">=": 0,
+            "if(object[index]==undefined)": 0,
+            "__p+='": 0,
+            "return __p": 0,
+            "arrays": 0,
+            "result[index]=collection[index][property]": 0,
+            "result[result.length]=collection[index][property]": 0,
+            "if(!initial)result=collection[++index]": 0,
+            "result=callback(result,collection[index],index,collection)": 0,
+            "result=initial\n?callback(result,collection[index],index,collection)\n:(initial=true,collection[index])": 0,
+            "result[index]=collection[index]": 0,
+            "result[result.length]=collection[index]": 0,
+            "var __t,__j=Array.prototype.join,__p=\"\";function print(){__p+=__j.call(arguments,\"\")}\n": 0,
+            ";\nreturn ": 0,
+            "with(object||{}){\n": 0,
+            "){\n": 0,
+            ";\n__p+='": 0,
+            "))==null?'':__t)+\n'": 0,
+            "==undefined)return ": 0,
+            "'+\n((__t=(": 0,
+            "))==null?'':_.escape(__t))+\n'": 0,
+            ";\nif(": 0,
+            ";\nvar index, result": 0,
+            "=": 0,
+            ";\nwhile(": 0,
+            "++index<length": 0,
+            ",index)){\n": 0,
+            "\"use strict\";return function(": 0,
+            ";\nfor(": 0,
+            "if(hasOwnProperty.call(": 0,
+            "index in ": 6,
+            ".length;\nindex=-1;\n": 0,
+            "if(length===+length){\n": 0,
+            "else{\n": 0,
+            "var length=": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.9": {
+        "stringLiterals": {
+            "4.17.9": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.6.1": {
+        "stringLiterals": {
+            "4.6.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.3.1": {
+        "stringLiterals": {
+            "1.3.1": 0,
+            "__wrapped__ ": 9,
+            "\n/*\n//@ sourceURL=": 8
+        },
+        "numbers": {
+            "40": 8
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {
+            "cache": 9,
+            "array": 1
+        },
+        "thisUsages": {}
+    },
+    "1.2.0": {
+        "stringLiterals": {
+            "1.2.0": 0,
+            "__wrapped__ ": 9,
+            "\n/*\n//@ sourceURL=": 8
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.8.2": {
+        "stringLiterals": {
+            "4.8.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "88": 8
+        }
+    },
+    "0.5.2": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length > -1 && length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.5.2": 0,
+            "var prop;\nif (typeof callback != 'function') {\n  var valueProp = callback;\n  callback = function(value) { return value[valueProp] }\n}\nelse if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 6,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop]++ : result[prop] = 1)": 6,
+            "if (!callback(value, index, collection)) return !result": 9,
+            "callback(value, index, collection) && result.push(value)": 9,
+            "arrayLikeClasses, ArrayProto, bind, compareAscending, concat, forIn, hasOwnProperty, identity, indexOf, isArguments, isArray, isFunction, isPlainObject, iteratorBind, objectClass, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString": 5,
+            "%>": 9,
+            "var props = concat.apply(ArrayProto, arguments)": 3,
+            "if (indexOf(props, index) < 0) result[index] = value": 3,
+            "if (isFunction(value)) result.push(index)": 7,
+            "object, source, indicator, stack": 5,
+            "var destValue, found, isArr, stackLength, recursive = indicator == isPlainObject;\nif (!recursive) stack = [];\nfor (var argsIndex = 1, argsLength = recursive ? 2 : arguments.length; argsIndex < argsLength; argsIndex++) {\n  if (iteratee = arguments[argsIndex]) {": 5,
+            "if (value && ((isArr = isArray(value)) || isPlainObject(value))) {\n  found = false; stackLength = stack.length;\n  while (stackLength--) {\n    if (found = stack[stackLength].source == value) break\n  }\n  if (found) {\n    result[index] = stack[stackLength].value\n  } else {\n    destValue = (destValue = result[index]) && isArr\n      ? (isArray(destValue) ? destValue : [])\n      : (isPlainObject(destValue) ? destValue : {});\n    stack.push({ value: destValue, source: value });\n    result[index] = callee(destValue, value, isPlainObject, stack)\n  }\n} else if (value != null) {\n  result[index] = value\n}": 5,
+            "result.push(value)": 9,
+            "if (value === target) return true": 9,
+            "if (callback(value, index, collection)) return value": 9,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(value)": 6,
+            "collection, properties": 9,
+            "var pass, prop, propIndex, props = [];\nforIn(properties, function(value, prop) { props.push(prop) });\nvar propsLength = props.length": 3,
+            "for (pass = true, propIndex = 0; propIndex < propsLength; propIndex++) {\n  prop = props[propIndex];\n  if (!(pass = value[prop] === properties[prop])) break\n}\nif (pass) result.push(value)": 3,
+            "var funcs = arguments,\n    length = funcs.length;\nif (length > 1) {\n  for (var index = 1; index < length; index++) {\n    result[funcs[index]] = bind(result[funcs[index]], result)\n  }\n  return result\n}": 7,
+            "if (isFunction(result[index])) {\n  result[index] = bind(result[index], result)\n}": 6,
+            "result[index] = callback(value, index, collection)": 9,
+            "noCharByIndex": 6,
+            "\n};\nreturn callee": 9,
+            "<e%-": 9,
+            "<e%=": 9,
+            " ||\n  (className == objectClass && length > -1 && length === length >>> 0 &&\n  isFunction(value.splice))) return !length": 5,
+            "//@cc_on !": 4,
+            "(callback(value, index, collection))": 9,
+            "var className = toString.call(value),\n    length = value.length;\nif (arrayLikeClasses[className]": 7,
+            "if (toString.call(iteratee) == stringClass) return collection.indexOf(target) > -1": 6,
+            "result[index] = (isFunc ? methodName : value[methodName]).apply(value, args)": 9,
+            "result[index] = value[property]": 9,
+            "result = callback(result, value, index, collection)": 9,
+            "result = noaccum\n  ? (noaccum = false, value)\n  : callback(result, value, index, collection)": 9,
+            "result[index] = {\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n}": 8,
+            " || isArguments(value)": 9,
+            "((isFunc ? methodName : value[methodName]).apply(value, args))": 9,
+            "(value[property])": 9,
+            "({\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n})": 8,
+            "[ownIndex] = ": 9,
+            "var callee = function(": 9,
+            "<e%-([\\s\\S]+?)%>|<e%=([\\s\\S]+?)%>": 6
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.4.0": {
+        "stringLiterals": {
+            "4.4.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.9.2": {
+        "stringLiterals": {
+            "isArray": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.16.6": {
+        "stringLiterals": {
+            "\\d*(?:(?:1ST|2ND|3RD|(?![123])\\dTH)\\b)": 6,
+            "\\d*(?:(?:1st|2nd|3rd|(?![123])\\dth)\\b)": 6,
+            "4.16.6": 0,
+            "Unsupported core-js use. Try https://github.com/es-shims.": 4
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.4.2": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {<% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var props = nativeKeys(iteratee),\n      propIndex = -1,\n      length = props.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++propIndex < length) {\n    index = props[propIndex];\n    if (!(skipProto && index == 'prototype')) {\n      <%= objectBranch.inLoop %>\n    }\n  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.4.2": 0,
+            "callback(iteratee[index], index, collection)": 2,
+            "if (!callback(iteratee[index], index, collection)) return !result": 2,
+            "result[index] = iteratee[index]": 5,
+            "callback(iteratee[index], index, collection) && result.push(iteratee[index])": 2,
+            "for (var iterateeIndex = 1, length = arguments.length; iterateeIndex < length; iterateeIndex++) {\n  iteratee = arguments[iterateeIndex];\n": 0,
+            "arrayClass, bind, compareAscending, funcClass, hasOwnProperty, identity, iteratorBind, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString": 0,
+            "if (!(object && objectTypes[typeof object])) throw TypeError()": 5,
+            "%>": 9,
+            "if (iteratee[index] === target) return true": 2,
+            "if (callback(iteratee[index], index, collection)) return iteratee[index]": 2,
+            "var prop, isFunc = typeof callback == 'function';\nif (isFunc && thisArg) callback = iteratorBind(callback, thisArg)": 2,
+            "prop = isFunc\n  ? callback(iteratee[index], index, collection)\n  : iteratee[index][callback];\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(iteratee[index])": 2,
+            "if (typeof callback == 'string') {\n  var prop = callback;\n  callback = function(collection) { return collection[prop] }\n}\nelse if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 2,
+            "var funcs = arguments,\n    length = funcs.length;\nif (length > 1) {\n  for (var index = 1; index < length; index++)\n    result[funcs[index]] = bind(result[funcs[index]], result);\n  return result\n}": 1,
+            "if (toString.call(result[index]) == funcClass) result[index] = bind(result[index], result)": 1,
+            "if (toString.call(iteratee[index]) == funcClass) result.push(index)": 2,
+            "var className = toString.call(value);\nif (className == arrayClass || className == stringClass) return !value.length": 8,
+            "result.push(iteratee[index])": 2,
+            "  if (iteratee) {": 0,
+            "  }\n": 8,
+            "result[index] = callback(iteratee[index], index, collection)": 2,
+            "noCharByIndex": 6,
+            "<e%-": 9,
+            "<e%=": 9,
+            "(callback(iteratee[index], index, collection))": 2,
+            "if (toString.call(iteratee) == stringClass) return collection.indexOf(target) > -1": 6,
+            "result[index] = (isFunc ? methodName : iteratee[index][methodName]).apply(iteratee[index], args)": 2,
+            "result[index] = iteratee[index][property]": 2,
+            "result = callback(result, iteratee[index], index, collection)": 2,
+            "result = noaccum\n  ? (noaccum = false, iteratee[index])\n  : callback(result, iteratee[index], index, collection)": 2,
+            "result[index] = {\n  criteria: callback(iteratee[index], index, collection),\n  value: iteratee[index]\n}": 2,
+            "((isFunc ? methodName : iteratee[index][methodName]).apply(iteratee[index], args))": 2,
+            "(iteratee[index][property])": 2,
+            "({\n  criteria: callback(iteratee[index], index, collection),\n  value: iteratee[index]\n})": 2,
+            "[propIndex] = ": 2,
+            "|<e%-([\\s\\S]+?)%>|<e%=([\\s\\S]+?)%>": 2,
+            " = {});\nvar __t, __p = '', __e = _.escape": 4,
+            "($^)": 2
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.0.1": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "3": 2
+        }
+    },
+    "4.0.0": {
+        "stringLiterals": {
+            "(?:\\ud83c[\\udffb-\\udfff])?": 0,
+            "+)?": 0,
+            "\\d+(?:": 0,
+            "4.0.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.13.1": {
+        "stringLiterals": {
+            "4.13.1": 0,
+            "This method is not supported with `core-js`. Try https://github.com/es-shims.": 1
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "100": 6
+        }
+    },
+    "4.17.3": {
+        "stringLiterals": {
+            "\\d*(?:(?:1ST|2ND|3RD|(?![123])\\dTH)\\b)": 6,
+            "\\d*(?:(?:1st|2nd|3rd|(?![123])\\dth)\\b)": 6,
+            "4.17.3": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.8.0": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === +length) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.8.0": 0,
+            "callback = createCallback(callback, thisArg)": 6,
+            "var prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop]++ : result[prop] = 1)": 2,
+            "if (!callback(value, index, collection)) return !result": 9,
+            "callback(value, index, collection) && result.push(value)": 9,
+            "object, callback, thisArg": 5,
+            "var isFunc = typeof callback == 'function';\nif (isFunc) callback = createCallback(callback, thisArg);\nelse var props = concat.apply(ArrayProto, arguments)": 2,
+            "if (isFunc\n  ? !callback(value, index, object)\n  : indexOf(props, index) < 0\n) result[index] = value": 5,
+            "arrayLikeClasses, ArrayProto, bind, compareAscending, concat, createCallback, forIn, hasOwnProperty, identity, indexOf, isArguments, isArray, isFunction, isPlainObject, objectClass, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString, undefined": 0,
+            "result[value] = index": 3,
+            "if (!(object && objectTypes[typeof object])) throw TypeError()": 5,
+            "if (isFunction(value)) result.push(index)": 7,
+            "object, source, indicator": 3,
+            "var isArr, args = arguments, argsIndex = 0;\nif (indicator == compareAscending) {\n  var argsLength = 2, stackA = args[3], stackB = args[4]\n} else {\n  var argsLength = args.length, stackA = [], stackB = []\n}\nwhile (++argsIndex < argsLength) {\n  if (iteratee = args[argsIndex]) {": 2,
+            "if ((source = value) && ((isArr = isArray(source)) || isPlainObject(source))) {\n  var found = false, stackLength = stackA.length;\n  while (stackLength--) {\n    if (found = stackA[stackLength] == source) break\n  }\n  if (found) {\n    result[index] = stackB[stackLength]\n  } else {\n    stackA.push(source);\n    stackB.push(value = (value = result[index]) && isArr\n      ? (isArray(value) ? value : [])\n      : (isPlainObject(value) ? value : {})\n    );\n    result[index] = callee(value, source, compareAscending, stackA, stackB)\n  }\n} else if (source != null) {\n  result[index] = source\n}": 1,
+            "if (typeof callback != 'function') {\n  var prop,\n      props = concat.apply(ArrayProto, arguments),\n      length = props.length;\n  for (index = 1; index < length; index++) {\n    prop = props[index];\n    if (prop in object) result[prop] = object[prop]\n  }\n} else {\n  callback = createCallback(callback, thisArg)": 1,
+            "if (callback(value, index, object)) result[index] = value": 5,
+            "result.push(value)": 9,
+            "if (value === target) return true": 9,
+            "if (callback(value, index, collection)) return value": 9,
+            "var prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(value)": 2,
+            "var noaccum = arguments.length < 3;\ncallback = createCallback(callback, thisArg)": 2,
+            "collection, properties": 9,
+            "var props = [];\nforIn(properties, function(value, prop) { props.push(prop) });\nvar propsLength = props.length": 5,
+            "for (var prop, pass = true, propIndex = 0; propIndex < propsLength; propIndex++) {\n  prop = props[propIndex];\n  if (!(pass = value[prop] === properties[prop])) break\n}\npass && result.push(value)": 4,
+            "var funcs = arguments,\n    length = funcs.length;\nif (length > 1) {\n  for (var index = 1; index < length; index++) {\n    result[funcs[index]] = bind(result[funcs[index]], result)\n  }\n  return result\n}": 7,
+            "if (isFunction(result[index])) {\n  result[index] = bind(result[index], result)\n}": 6,
+            "result[index] = callback(value, index, collection)": 9,
+            "\n};\nreturn callee": 9,
+            " ||\n  (className == objectClass && length === +length &&\n  isFunction(value.splice))) return !length": 2,
+            "([index, value])": 3,
+            "(callback(value, index, collection))": 9,
+            "if (!value) return result;\nvar className = toString.call(value),\n    length = value.length;\nif (arrayLikeClasses[className]": 0,
+            "if (toString.call(collection) == stringClass) return collection.indexOf(target) > -1": 5,
+            "result[index] = (isFunc ? methodName : value[methodName]).apply(value, args)": 9,
+            "result[index] = value[property]": 9,
+            "if (noaccum) result = iteratee[++index]": 5,
+            "result = callback(result, value, index, collection)": 9,
+            "result = noaccum\n  ? (noaccum = false, value)\n  : callback(result, value, index, collection)": 9,
+            "result[index] = {\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n}": 8,
+            " || isArguments(value)": 9,
+            "[ownIndex] = ": 9,
+            "((isFunc ? methodName : value[methodName]).apply(value, args))": 9,
+            "(value[property])": 9,
+            "({\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n})": 8,
+            "var callee = function(": 9
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.11": {
+        "stringLiterals": {
+            "4.17.11": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.13": {
+        "stringLiterals": {
+            "4.17.13": 0,
+            "variable": 9
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.3.1": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.20": {
+        "stringLiterals": {
+            "4.17.20": 0,
+            "variable": 9
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.5.0": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length > -1 && length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = nativeKeys(iteratee),\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    if (!(skipProto && index == 'prototype')) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }\n  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 1,
+            "0.5.0": 0,
+            "var prop;\nif (typeof callback != 'function') {\n  var valueProp = callback;\n  callback = function(value) { return value[valueProp] }\n}\nelse if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 6,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop]++ : result[prop] = 1)": 6,
+            "if (!callback(value, index, collection)) return !result": 9,
+            "callback(value, index, collection) && result.push(value)": 9,
+            "arrayLikeClasses, ArrayProto, bind, compareAscending, concat, forIn, hasOwnProperty, identity, indexOf, isArguments, isArray, isFunction, isPlainObject, iteratorBind, objectClass, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString": 5,
+            "%>": 9,
+            "if (!(object && objectTypes[typeof object])) throw TypeError()": 5,
+            "var props = concat.apply(ArrayProto, arguments)": 3,
+            "if (indexOf(props, index) < 0) result[index] = value": 3,
+            "if (isFunction(value)) result.push(index)": 7,
+            "result.push(value)": 9,
+            "if (value === target) return true": 9,
+            "if (callback(value, index, collection)) return value": 9,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(value)": 6,
+            "object, source, indicator, stack": 5,
+            "var destValue, found, isArr, stackLength, recursive = indicator == isPlainObject;\nif (!recursive) stack = [];\nfor (var argsIndex = 1, argsLength = recursive ? 2 : arguments.length; argsIndex < argsLength; argsIndex++) {\n  if (iteratee = arguments[argsIndex]) {": 5,
+            "if (value && ((isArr = isArray(value)) || isPlainObject(value))) {\n  found = false; stackLength = stack.length;\n  while (stackLength--) {\n    if (found = stack[stackLength].source == value) break\n  }\n  if (found) {\n    result[index] = stack[stackLength].value\n  } else {\n    destValue = (destValue = result[index]) && isArr\n      ? (isArray(destValue) ? destValue : [])\n      : (isPlainObject(destValue) ? destValue : {});\n    stack.push({ value: destValue, source: value });\n    result[index] = callee(destValue, value, isPlainObject, stack)\n  }\n} else if (value != null) {\n  result[index] = value\n}": 5,
+            "collection, properties": 9,
+            "var pass, prop, propIndex, props = [];\nforIn(properties, function(value, prop) { props.push(prop) });\nvar propsLength = props.length": 3,
+            "for (pass = true, propIndex = 0; propIndex < propsLength; propIndex++) {\n  prop = props[propIndex];\n  if (!(pass = value[prop] === properties[prop])) break\n}\nif (pass) result.push(value)": 3,
+            "var funcs = arguments,\n    length = funcs.length;\nif (length > 1) {\n  for (var index = 1; index < length; index++) {\n    result[funcs[index]] = bind(result[funcs[index]], result)\n  }\n  return result\n}": 7,
+            "if (isFunction(result[index])) {\n  result[index] = bind(result[index], result)\n}": 6,
+            "result[index] = callback(value, index, collection)": 9,
+            "noCharByIndex": 6,
+            "\n};\nreturn callee": 9,
+            "<e%-": 9,
+            "<e%=": 9,
+            " ||\n  (className == objectClass && length > -1 && length === length >>> 0 &&\n  isFunction(value.splice))) return !length": 5,
+            "//@cc_on !": 4,
+            "(callback(value, index, collection))": 9,
+            "var className = toString.call(value),\n    length = value.length;\nif (arrayLikeClasses[className]": 7,
+            "if (toString.call(iteratee) == stringClass) return collection.indexOf(target) > -1": 6,
+            "result[index] = (isFunc ? methodName : value[methodName]).apply(value, args)": 9,
+            "result[index] = value[property]": 9,
+            "result = callback(result, value, index, collection)": 9,
+            "result = noaccum\n  ? (noaccum = false, value)\n  : callback(result, value, index, collection)": 9,
+            "result[index] = {\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n}": 8,
+            " || isArguments(value)": 9,
+            "((isFunc ? methodName : value[methodName]).apply(value, args))": 9,
+            "(value[property])": 9,
+            "({\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n})": 8,
+            "[ownIndex] = ": 9,
+            "var callee = function(": 9,
+            "<e%-([\\s\\S]+?)%>|<e%=([\\s\\S]+?)%>": 6,
+            " = {});\nvar __t, __p = '', __e = _.escape": 4
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.10.0": {
+        "stringLiterals": {
+            "isArray": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.7.0": {
+        "stringLiterals": {
+            "4.7.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "88": 8
+        }
+    },
+    "0.8.2": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result = <%= init || firstArg %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === +length) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.8.2": 0,
+            "callback = createCallback(callback, thisArg)": 6,
+            "var prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop]++ : result[prop] = 1)": 2,
+            "if (!callback(value, index, collection)) return !result": 9,
+            "callback(value, index, collection) && result.push(value)": 9,
+            "collection || []": 0,
+            "object, callback, thisArg": 5,
+            "var isFunc = typeof callback == 'function';\nif (isFunc) callback = createCallback(callback, thisArg);\nelse var props = concat.apply(ArrayProto, arguments)": 2,
+            "if (isFunc\n  ? !callback(value, index, object)\n  : indexOf(props, index) < 0\n) result[index] = value": 5,
+            "arrayLikeClasses, ArrayProto, bind, compareAscending, concat, createCallback, forIn, hasOwnProperty, indexOf, isArguments, isArray, isFunction, isPlainObject, objectClass, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString, undefined": 1,
+            "result[value] = index": 3,
+            "isFunction(value) && result.push(index)": 0,
+            "object, source, indicator": 3,
+            "var isArr, args = arguments, argsIndex = 0;\nif (indicator == compareAscending) {\n  var argsLength = 2, stackA = args[3], stackB = args[4]\n} else {\n  var argsLength = args.length, stackA = [], stackB = []\n}\nwhile (++argsIndex < argsLength) {\n  if (iteratee = args[argsIndex]) {": 2,
+            "if ((source = value) && ((isArr = isArray(source)) || isPlainObject(source))) {\n  var found = false, stackLength = stackA.length;\n  while (stackLength--) {\n    if (found = stackA[stackLength] == source) break\n  }\n  if (found) {\n    result[index] = stackB[stackLength]\n  } else {\n    stackA.push(source);\n    stackB.push(value = (value = result[index], isArr)\n      ? (isArray(value) ? value : [])\n      : (isPlainObject(value) ? value : {})\n    );\n    result[index] = callee(value, source, compareAscending, stackA, stackB)\n  }\n} else if (source != null) {\n  result[index] = source\n}": 0,
+            "if (typeof callback != 'function') {\n  var index = 0,\n      props = concat.apply(ArrayProto, arguments),\n      length = props.length;\n  while (++index < length) {\n    var prop = props[index];\n    if (prop in object) result[prop] = object[prop]\n  }\n} else {\n  callback = createCallback(callback, thisArg)": 0,
+            "if (callback(value, index, object)) result[index] = value": 5,
+            "result.push(value)": 9,
+            "if (value === target) return true": 9,
+            "undefined": 0,
+            "if (callback(value, index, collection)) return value": 9,
+            "var prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(value)": 2,
+            "var noaccum = arguments.length < 3;\ncallback = createCallback(callback, thisArg)": 2,
+            "collection, properties": 9,
+            "var props = [];\nforIn(properties, function(value, prop) { props.push(prop) });\nvar propsLength = props.length": 5,
+            "for (var pass = true, propIndex = 0; propIndex < propsLength; propIndex++) {\n  var prop = props[propIndex];\n  if (!(pass = value[prop] === properties[prop])) break\n}\npass && result.push(value)": 0,
+            "var funcs = arguments,\n    index = 0,\n    length = funcs.length;\nif (length > 1) {\n  while (++index < length) {\n    result[funcs[index]] = bind(result[funcs[index]], result)\n  }\n  return result\n}": 0,
+            "if (isFunction(value)) result[index] = bind(value, result)": 0,
+            "result[index] = callback(value, index, collection)": 9,
+            "\n};\nreturn callee": 9,
+            " ||\n  (className == objectClass && length === +length &&\n  isFunction(value.splice))) return !length": 2,
+            "([index, value])": 3,
+            "(callback(value, index, collection))": 9,
+            "var className = toString.call(value),\n    length = value.length;\nif (arrayLikeClasses[className]": 7,
+            "if (toString.call(collection) == stringClass) return collection.indexOf(target) > -1": 5,
+            "result[index] = (isFunc ? methodName : value[methodName]).apply(value, args)": 9,
+            "result[index] = value[property]": 9,
+            "if (noaccum) result = iteratee[++index]": 5,
+            "result = callback(result, value, index, collection)": 9,
+            "result = noaccum\n  ? (noaccum = false, value)\n  : callback(result, value, index, collection)": 9,
+            "result[index] = {\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n}": 8,
+            " || isArguments(value)": 9,
+            "[ownIndex] = ": 9,
+            "((isFunc ? methodName : value[methodName]).apply(value, args))": 9,
+            "(value[property])": 9,
+            "({\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n})": 8,
+            "var callee = function(": 9
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.16.0": {
+        "stringLiterals": {
+            "4.16.0": 0,
+            "This method is not supported with core-js. Try https://github.com/es-shims.": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.14.2": {
+        "stringLiterals": {
+            "4.14.2": 0,
+            "This method is not supported with core-js. Try https://github.com/es-shims.": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "100": 6
+        }
+    },
+    "1.0.2": {
+        "stringLiterals": {
+            "1.0.2": 0,
+            "object, source, guard": 8,
+            "var args = arguments,\n    argsIndex = 0,\n    argsLength = typeof guard == 'number' ? 2 : args.length;\nwhile (++argsIndex < argsLength) {\n  iterable = args[argsIndex];\n  if (iterable && objectTypes[typeof iterable]) {": 4,
+            "if (typeof result[index] == 'undefined') result[index] = iterable[index]": 4,
+            "callback = callback && typeof thisArg == 'undefined' ? callback : createCallback(callback, thisArg)": 5,
+            "typeof length == 'number'": 2,
+            "if (callback(iterable[index], index, collection) === false) return result": 4,
+            "if (!objectTypes[typeof iterable]) return result;\n": 4,
+            "createCallback, hasOwnProperty, isArguments, isArray, isString, objectTypes, nativeKeys": 2,
+            "result[index] = callback ? callback(result[index], iterable[index]) : iterable[index]": 4,
+            ";": 4,
+            ";\nif (argsLength > 3 && typeof args[argsLength - 2] == 'function') {\n  var callback = createCallback(args[--argsLength - 1], args[argsLength--], 2);\n} else if (argsLength > 2 && typeof args[argsLength - 1] == 'function') {\n  callback = args[--argsLength];\n}": 1,
+            "isArray(iterable)": 4,
+            ";\nreturn result": 4,
+            ", result = iterable;\nif (!iterable) return result;\n": 2,
+            "\n  }\n}\nelse {  ": 4,
+            "\n  }  ": 4,
+            "\n  for (index in iterable) {": 4,
+            "\n/*\n//@ sourceURL=": 8,
+            "var index, iterable = ": 4,
+            "\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iterable] ? nativeKeys(iterable) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    ": 2,
+            ";    ": 4,
+            "\n    }": 4,
+            ") {\n  while (++index < length) {\n    ": 4,
+            "\n    if (": 4,
+            ") {    ": 4,
+            "var length = iterable.length; index = -1;\nif (": 4,
+            "hasOwnProperty.call(iterable, index)": 4
+        },
+        "numbers": {
+            "100": 5
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.10.0": {
+        "stringLiterals": {
+            "<% if (obj.useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result = <%= firstArg %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayLoop) { %>var length = iteratee.length; index = -1;\nif (typeof length == 'number') {  <% if (noCharByIndex) { %>\n  if (isString(iteratee)) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayLoop %>\n  }\n}\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectLoop %>\n  }    <% } %>  <% } %>  <% if (arrayLoop || noArgsEnum) { %>\n}<% } %>\n<%= bottom %>;\nreturn result": 1,
+            "0.10.0": 0,
+            "object, source, guard": 8,
+            "for (var argsIndex = 1, argsLength = typeof guard == 'number' ? 2 : arguments.length; argsIndex < argsLength; argsIndex++) {\n  if ((iteratee = arguments[argsIndex])) {": 3,
+            "callback = createCallback(callback, thisArg)": 6,
+            "createCallback, hasOwnProperty, isArguments, isString, objectTypes, nativeKeys, propertyIsEnumerable": 4,
+            "\n//@ sourceURL=": 6
+        },
+        "numbers": {
+            "74": 3
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.6.0": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length > -1 && length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;\n    <% if (!hasDontEnumBug || useHas) { %>}\n<% } %>  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 1,
+            "0.6.0": 0,
+            "var prop;\nif (typeof callback != 'function') {\n  var valueProp = callback;\n  callback = function(value) { return value[valueProp] }\n}\nelse if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 6,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop]++ : result[prop] = 1)": 6,
+            "object, callback, thisArg": 5,
+            "var isFunc = typeof callback == 'function';\nif (!isFunc) {\n  var props = concat.apply(ArrayProto, arguments)\n} else if (thisArg) {\n  callback = iteratorBind(callback, thisArg)\n}": 2,
+            "if (isFunc\n  ? !callback(value, index, object)\n  : indexOf(props, index) < 0\n) result[index] = value": 5,
+            "if (!callback(value, index, collection)) return !result": 9,
+            "callback(value, index, collection) && result.push(value)": 9,
+            "arrayLikeClasses, ArrayProto, bind, compareAscending, concat, forIn, hasOwnProperty, identity, indexOf, isArguments, isArray, isFunction, isPlainObject, iteratorBind, objectClass, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString": 5,
+            "%>": 9,
+            "if (isFunction(value)) result.push(index)": 7,
+            "object, source, indicator, stack": 5,
+            "var destValue, found, isArr, stackLength, recursive = indicator == isPlainObject;\nif (!recursive) stack = [];\nfor (var argsIndex = 1, argsLength = recursive ? 2 : arguments.length; argsIndex < argsLength; argsIndex++) {\n  if (iteratee = arguments[argsIndex]) {": 5,
+            "if (value && ((isArr = isArray(value)) || isPlainObject(value))) {\n  found = false; stackLength = stack.length;\n  while (stackLength--) {\n    if (found = stack[stackLength].source == value) break\n  }\n  if (found) {\n    result[index] = stack[stackLength].value\n  } else {\n    destValue = (destValue = result[index]) && isArr\n      ? (isArray(destValue) ? destValue : [])\n      : (isPlainObject(destValue) ? destValue : {});\n    stack.push({ value: destValue, source: value });\n    result[index] = callee(destValue, value, isPlainObject, stack)\n  }\n} else if (value != null) {\n  result[index] = value\n}": 5,
+            "if (typeof callback != 'function') {\n  var prop,\n      props = concat.apply(ArrayProto, arguments),\n      length = props.length;\n  for (index = 1; index < length; index++) {\n    prop = props[index];\n    if (prop in object) result[prop] = object[prop]\n  }\n} else {\n  if (thisArg) callback = iteratorBind(callback, thisArg)": 2,
+            "if (callback(value, index, object)) result[index] = value": 5,
+            "result.push(value)": 9,
+            "if (value === target) return true": 9,
+            "if (callback(value, index, collection)) return value": 9,
+            "prop = callback(value, index, collection);\n(hasOwnProperty.call(result, prop) ? result[prop] : result[prop] = []).push(value)": 6,
+            "collection, properties": 9,
+            "var props = [];\nforIn(properties, function(value, prop) { props.push(prop) });\nvar propsLength = props.length": 5,
+            "for (var prop, pass = true, propIndex = 0; propIndex < propsLength; propIndex++) {\n  prop = props[propIndex];\n  if (!(pass = value[prop] === properties[prop])) break\n}\npass && result.push(value)": 4,
+            "var funcs = arguments,\n    length = funcs.length;\nif (length > 1) {\n  for (var index = 1; index < length; index++) {\n    result[funcs[index]] = bind(result[funcs[index]], result)\n  }\n  return result\n}": 7,
+            "if (isFunction(result[index])) {\n  result[index] = bind(result[index], result)\n}": 6,
+            "result[index] = callback(value, index, collection)": 9,
+            "\n};\nreturn callee": 9,
+            "<e%-": 9,
+            "<e%=": 9,
+            " ||\n  (className == objectClass && length > -1 && length === length >>> 0 &&\n  isFunction(value.splice))) return !length": 5,
+            "//@cc_on !": 4,
+            "(callback(value, index, collection))": 9,
+            "var className = toString.call(value),\n    length = value.length;\nif (arrayLikeClasses[className]": 7,
+            "if (toString.call(collection) == stringClass) return collection.indexOf(target) > -1": 5,
+            "result[index] = (isFunc ? methodName : value[methodName]).apply(value, args)": 9,
+            "result[index] = value[property]": 9,
+            "if (noaccum) result = iteratee[++index]": 5,
+            "result = callback(result, value, index, collection)": 9,
+            "result = noaccum\n  ? (noaccum = false, value)\n  : callback(result, value, index, collection)": 9,
+            "result[index] = {\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n}": 8,
+            " || isArguments(value)": 9,
+            "((isFunc ? methodName : value[methodName]).apply(value, args))": 9,
+            "(value[property])": 9,
+            "({\n  criteria: callback(value, index, collection),\n  index: index,\n  value: value\n})": 8,
+            "[ownIndex] = ": 9,
+            "var callee = function(": 9,
+            "<e%-([\\s\\S]+?)%>|<e%=([\\s\\S]+?)%>": 6
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.9.0": {
+        "stringLiterals": {
+            "4.9.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "88": 8
+        }
+    },
+    "2.2.1": {
+        "stringLiterals": {
+            "2.2.1": 0,
+            "(": 7,
+            "__wrapped__ ": 9,
+            "__bindData__": 7,
+            "sample": 7,
+            "\n/*\n//# sourceURL=": 7
+        },
+        "numbers": {
+            "40": 8,
+            "17": 7,
+            "19": 7
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {
+            "cache": 9
+        },
+        "thisUsages": {
+            "17": 1
+        }
+    },
+    "3.4.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.0.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "3": 2
+        }
+    },
+    "4.11.2": {
+        "stringLiterals": {
+            "4.11.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "88": 8
+        }
+    },
+    "3.5.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.2.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.1.1": {
+        "stringLiterals": {
+            "1.1.1": 0,
+            "object, source, guard": 8,
+            "var args = arguments,\n    argsIndex = 0,\n    argsLength = typeof guard == 'number' ? 2 : args.length;\nwhile (++argsIndex < argsLength) {\n  iterable = args[argsIndex];\n  if (iterable && objectTypes[typeof iterable]) {": 4,
+            "if (typeof result[index] == 'undefined') result[index] = iterable[index]": 4,
+            "callback = callback && typeof thisArg == 'undefined' ? callback : lodash.createCallback(callback, thisArg)": 1,
+            "if (callback(iterable[index], index, collection) === false) return result": 4,
+            "if (!objectTypes[typeof iterable]) return result;\n": 4,
+            "hasOwnProperty, isArguments, isArray, isString, keys, lodash, objectTypes": 1,
+            "if (!(objectTypes[typeof object])) return result": 1,
+            "result[index] = callback ? callback(result[index], iterable[index]) : iterable[index]": 4,
+            ";": 4,
+            ";\nif (argsLength > 3 && typeof args[argsLength - 2] == 'function') {\n  var callback = lodash.createCallback(args[--argsLength - 1], args[argsLength--], 2);\n} else if (argsLength > 2 && typeof args[argsLength - 1] == 'function') {\n  callback = args[--argsLength];\n}": 1,
+            "isArray(iterable)": 4,
+            "iterable": 1,
+            "__wrapped__ ": 9,
+            ";\nreturn result": 4,
+            ";\nif (!iterable) return result;\n": 1,
+            "\n  }\n}\nelse {  ": 4,
+            "\n  }  ": 4,
+            "\n  for (index in iterable) {": 4,
+            "\n/*\n//@ sourceURL=": 8,
+            "\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iterable] ? keys(iterable) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    ": 1,
+            ";    ": 4,
+            "\n    }": 4,
+            ", result = ": 1,
+            ") {\n  while (++index < length) {\n    ": 4,
+            "\n    if (": 4,
+            ") {    ": 4,
+            "var index, iterable = ": 4,
+            "var length = iterable.length; index = -1;\nif (": 4,
+            "hasOwnProperty.call(iterable, index)": 4
+        },
+        "numbers": {
+            "100": 5
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.3.0": {
+        "stringLiterals": {
+            "4.3.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.10.0": {
+        "stringLiterals": {
+            "4.10.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {
+            "88": 8
+        }
+    },
+    "4.17.16": {
+        "stringLiterals": {
+            "[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]": 0,
+            "[\\ufe0e\\ufe0f]?": 0,
+            "(?:[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]|\\ud83c[\\udffb-\\udfff])?": 0,
+            "[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]": 0,
+            "4.17.16": 0,
+            "(?:\\u200d(?:": 0,
+            "variable": 9
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {
+            "s": 0
+        },
+        "thisUsages": {}
+    },
+    "4.5.0": {
+        "stringLiterals": {
+            "4.5.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.9.2": {
+        "stringLiterals": {
+            "<% if (obj.useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result = <%= firstArg %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayLoop) { %>var length = iteratee.length; index = -1;\nif (typeof length == 'number') {  <% if (noCharByIndex) { %>\n  if (isString(iteratee)) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayLoop %>\n  }\n}\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectLoop %>\n  }    <% } %>  <% } %>  <% if (arrayLoop || noArgsEnum) { %>\n}<% } %>\n<%= bottom %>;\nreturn result": 1,
+            "0.9.2": 0,
+            "callback = createCallback(callback, thisArg)": 6,
+            "createCallback, hasOwnProperty, isArguments, isString, objectTypes, nativeKeys, propertyIsEnumerable": 4,
+            "\n//@ sourceURL=": 6
+        },
+        "numbers": {
+            "74": 3
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.0.0-rc.2": {
+        "stringLiterals": {
+            "<% if (obj.useStrict) { %>'use strict';\n<% } %>var index, iteratee = <%= firstArg %>, result = <%= firstArg %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayLoop) { %>var length = iteratee.length; index = -1;\nif (typeof length == 'number') {  <% if (noCharByIndex) { %>\n  if (isString(iteratee)) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  while (++index < length) {\n    <%= arrayLoop %>\n  }\n}\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      index += '';\n      <%= objectLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    <%= objectLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    <%= objectLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    <%= objectLoop %>\n  }    <% } %>  <% } %>  <% if (arrayLoop || noArgsEnum) { %>\n}<% } %>\n<%= bottom %>;\nreturn result": 1,
+            "1.0.0-rc.2": 0,
+            "object, source, guard": 8,
+            "for (var argsIndex = 1, argsLength = typeof guard == 'number' ? 2 : arguments.length; argsIndex < argsLength; argsIndex++) {\n  if ((iteratee = arguments[argsIndex])) {": 3,
+            "result[index] = iteratee[index]": 5,
+            "callback = callback && typeof thisArg == 'undefined' ? callback : createCallback(callback, thisArg)": 5,
+            "if (callback(iteratee[index], index, collection) === false) return result": 2,
+            "1": 1,
+            "\n})": 1,
+            "createCallback, hasOwnProperty, isArguments, isString, objectTypes, nativeKeys, propertyIsEnumerable": 4,
+            "\n//@ sourceURL=": 6,
+            ") {": 1,
+            "(function(": 1
+        },
+        "numbers": {
+            "74": 3
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.3.0": {
+        "stringLiterals": {
+            "1.3.0": 0,
+            "__wrapped__ ": 9,
+            "\n/*\n//@ sourceURL=": 8
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {
+            "cache": 9,
+            "array": 1
+        },
+        "thisUsages": {}
+    },
+    "1.0.0": {
+        "stringLiterals": {
+            "1.0.0": 0,
+            "object, source, guard": 8,
+            "var args = arguments,\n    argsIndex = 0,\n    argsLength = typeof guard == 'number' ? 2 : args.length;\nwhile (++argsIndex < argsLength) {\n  iterable = args[argsIndex];\n  if (iterable && objectTypes[typeof iterable]) {": 4,
+            "if (typeof result[index] == 'undefined') result[index] = iterable[index]": 4,
+            "callback = callback && typeof thisArg == 'undefined' ? callback : createCallback(callback, thisArg)": 5,
+            "typeof length == 'number'": 2,
+            "if (callback(iterable[index], index, collection) === false) return result": 4,
+            "if (!objectTypes[typeof iterable]) return result;\n": 4,
+            "createCallback, hasOwnProperty, isArguments, isArray, isString, objectTypes, nativeKeys": 2,
+            "result[index] = callback ? callback(result[index], iterable[index]) : iterable[index]": 4,
+            ";": 4,
+            ";\nif (argsLength > 2) {\n  if (typeof args[argsLength - 2] == 'function') {\n    var callback = createCallback(args[--argsLength - 1], args[argsLength--], 2);\n  } else if (typeof args[argsLength - 1] == 'function') {\n    callback = args[--argsLength];\n  }\n}": 0,
+            "isArray(iterable)": 4,
+            ";\nreturn result": 4,
+            ", result = iterable;\nif (!iterable) return result;\n": 2,
+            "\n  }\n}\nelse {  ": 4,
+            "\n  }  ": 4,
+            "\n  for (index in iterable) {": 4,
+            "\n/*\n//@ sourceURL=": 8,
+            "var index, iterable = ": 4,
+            "\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iterable] ? nativeKeys(iterable) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    ": 2,
+            ";    ": 4,
+            "\n    }": 4,
+            ") {\n  while (++index < length) {\n    ": 4,
+            "\n    if (": 4,
+            ") {    ": 4,
+            "var length = iterable.length; index = -1;\nif (": 4,
+            "hasOwnProperty.call(iterable, index)": 4
+        },
+        "numbers": {
+            "100": 5
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.4.0": {
+        "stringLiterals": {
+            "2.4.0": 0,
+            "(": 7,
+            ".*?": 3,
+            "__bindData__": 7,
+            "sample": 7,
+            "\n/*\n//# sourceURL=": 7
+        },
+        "numbers": {
+            "40": 8,
+            "17": 7,
+            "19": 7
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {
+            "cache": 9
+        },
+        "thisUsages": {
+            "15": 2
+        }
+    },
+    "4.1.0": {
+        "stringLiterals": {
+            "4.1.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.2.1": {
+        "stringLiterals": {
+            "var index, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = <%= firstArg %>.length; index = -1;  <% if (objectBranch) { %>\nif (length === +length) {<% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (<%= arrayBranch.loopExp %>) {\n    <%= arrayBranch.inLoop %>;\n  }  <% if (objectBranch) { %>\n}\n<% }}if (objectBranch) {  if (arrayBranch) { %>else {\n<% }  if (!hasDontEnumBug) { %>  var skipProto = typeof <%= iteratedObject %> == 'function';\n<% } %>  <%= objectBranch.beforeLoop %>;\n  for (<%= objectBranch.loopExp %>) {  \n<%  if (hasDontEnumBug) {    if (useHas) { %>    if (<%= hasExp %>) {\n  <% } %>    <%= objectBranch.inLoop %>;<%    if (useHas) { %>\n    }<% }  }  else {  %>    if (!(skipProto && index == 'prototype')<% if (useHas) { %> && <%= hasExp %><% } %>) {\n      <%= objectBranch.inLoop %>;\n    }  <% } %>\n  }  <% if (hasDontEnumBug) { %>\n  var ctor = <%= iteratedObject %>.constructor;\n  <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === <%= iteratedObject %>) && <%      } %><%= hasExp %>) {\n    <%= objectBranch.inLoop %>;\n  }<%     }   }   if (arrayBranch) { %>\n}<% }} %>\n<%= bottom %>;\nreturn result": 2,
+            "0.2.1": 0,
+            "if (!callback) {\n  callback = identity\n}\nelse if (thisArg) {\n  callback = bind(callback, thisArg)\n}": 2,
+            "callback(collection[index], index, collection)": 5,
+            "if (!callback(collection[index], index, collection)) return !result": 5,
+            "index in source": 6,
+            "object[index] = source[index]": 5,
+            "callback(collection[index], index, collection) && result.push(collection[index])": 5,
+            "&#x2F;": 2,
+            "for (var source, sourceIndex = 1, length = arguments.length; sourceIndex < length; sourceIndex++) {\n  source = arguments[sourceIndex];\n": 7,
+            "arrayClass, bind, funcClass, hasOwnProperty, identity, objectTypes, stringClass, toString, undefined": 1,
+            "if (collection[index] === target) return true": 5,
+            "if (callback(collection[index], index, collection)) return collection[index]": 5,
+            "if (thisArg) callback = bind(callback, thisArg)": 2,
+            "var noaccum = arguments.length < 3;\nif (thisArg) callback = bind(callback, thisArg)": 2,
+            "if (toString.call(object[index]) == funcClass) result.push(index)": 5,
+            "var className = toString.call(value);\nif (className == arrayClass || className == stringClass) return !value.length": 8,
+            "  if (source) {": 7,
+            "  }\n": 8,
+            "result = []": 5,
+            "result[index] = callback(collection[index], index, collection)": 5,
+            "result.push(callback(collection[index], index, collection))": 5,
+            ", index)": 5,
+            ")) == null ? '' : _.escape(__t)) +\n'": 4,
+            "if (object[index] == undefined)": 5,
+            "if (!objectTypes[typeof object] || object === null) throw TypeError()": 5,
+            "hasOwnProperty.call(": 5,
+            "index in ": 6,
+            "'+\n((__t = (": 5,
+            "result[index] = collection[index][property]": 4,
+            "result.push(collection[index][property])": 4,
+            "result = callback(result, collection[index], index, collection)": 5,
+            "result = noaccum\n  ? (noaccum = false, collection[index])\n  : callback(result, collection[index], index, collection)": 5,
+            "result[index] = collection[index]": 3,
+            "result.push(collection[index])": 3,
+            "__p='": 5,
+            ") {\nvar __p, __t, __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n": 5,
+            "++index < length": 5,
+            "\"use strict\"; return function(": 7,
+            " || {}) {\n": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.19": {
+        "stringLiterals": {
+            "4.17.19": 0,
+            "variable": 9
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.2.0": {
+        "stringLiterals": {
+            "2.2.0": 0,
+            "(": 7,
+            "__wrapped__ ": 9,
+            "__bindData__": 7,
+            "sample": 7,
+            "\n/*\n//# sourceURL=": 7
+        },
+        "numbers": {
+            "40": 8,
+            "17": 7,
+            "19": 7
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {
+            "cache": 9
+        },
+        "thisUsages": {
+            "16": 2
+        }
+    },
+    "2.4.1": {
+        "stringLiterals": {
+            "2.4.1": 0,
+            "(": 7,
+            ".*?": 3,
+            "__bindData__": 7,
+            "sample": 7,
+            "\n/*\n//# sourceURL=": 7
+        },
+        "numbers": {
+            "40": 8,
+            "17": 7,
+            "19": 7
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {
+            "cache": 9
+        },
+        "thisUsages": {
+            "15": 2
+        }
+    },
+    "4.16.2": {
+        "stringLiterals": {
+            "4.16.2": 0,
+            "Unsupported core-js use. Try https://github.com/es-shims.": 4
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.14": {
+        "stringLiterals": {
+            "4.17.14": 0,
+            "variable": 9
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.3.2": {
+        "stringLiterals": {
+            "var index, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = <%= firstArg %>.length; index = -1;  <% if (objectBranch) { %>\nif (length === length >>> 0) {<% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (<%= arrayBranch.loopExp %>) {\n    <%= arrayBranch.inLoop %>;\n  }  <% if (objectBranch) { %>\n}\n<% }}if (objectBranch) {  if (arrayBranch) { %>else {\n<% }  if (!hasDontEnumBug) { %>  var skipProto = typeof <%= iteratedObject %> == 'function';\n<% } %>  <%= objectBranch.beforeLoop %>;\n  for (<%= objectBranch.loopExp %>) {  \n<%  if (hasDontEnumBug) {    if (useHas) { %>    if (<%= hasExp %>) {\n  <% } %>    <%= objectBranch.inLoop %>;<%    if (useHas) { %>\n    }<% }  }  else {  %>    if (!(skipProto && index == 'prototype')<% if (useHas) { %> && <%= hasExp %><% } %>) {\n      <%= objectBranch.inLoop %>;\n    }  <% } %>\n  }  <% if (hasDontEnumBug) { %>\n  var ctor = <%= iteratedObject %>.constructor;\n  <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === <%= iteratedObject %>) && <%      } %><%= hasExp %>) {\n    <%= objectBranch.inLoop %>;\n  }<%     }   }   if (arrayBranch) { %>\n}<% }} %>\n<%= bottom %>;\nreturn result": 2,
+            "0.3.2": 0,
+            "callback(collection[index], index, collection)": 5,
+            "if (!callback(collection[index], index, collection)) return !result": 5,
+            "index in source": 6,
+            "object[index] = source[index]": 5,
+            "callback(collection[index], index, collection) && result.push(collection[index])": 5,
+            "for (var source, sourceIndex = 1, length = arguments.length; sourceIndex < length; sourceIndex++) {\n  source = arguments[sourceIndex];\n": 7,
+            "arrayClass, funcClass, hasOwnProperty, identity, iteratorBind, objectTypes, slice, stringClass, toString, undefined": 0,
+            "if (!objectTypes[typeof object] || object === null) throw TypeError()": 5,
+            "if (collection[index] === target) return true": 5,
+            "if (callback(collection[index], index, collection)) return collection[index]": 5,
+            "if (toString.call(object[index]) == funcClass) result.push(index)": 5,
+            "var className = toString.call(value);\nif (className == arrayClass || className == stringClass) return !value.length": 8,
+            "result.push(object[index])": 1,
+            "  if (source) {": 7,
+            "  }\n": 8,
+            "result = []": 5,
+            "result[index] = callback(collection[index], index, collection)": 5,
+            "result.push(callback(collection[index], index, collection))": 5,
+            ", index)": 5,
+            "if (object[index] == undefined)": 5,
+            "hasOwnProperty.call(": 5,
+            "index in ": 6,
+            "'+\n_.escape(": 0,
+            "'+\n((__t = (": 5,
+            "result[index] = (isFunc ? methodName : collection[index][methodName]).apply(collection[index], args)": 0,
+            "result.push((isFunc ? methodName : collection[index][methodName]).apply(collection[index], args))": 0,
+            "result[index] = collection[index][property]": 4,
+            "result.push(collection[index][property])": 4,
+            "result = callback(result, collection[index], index, collection)": 5,
+            "result = noaccum\n  ? (noaccum = false, collection[index])\n  : callback(result, collection[index], index, collection)": 5,
+            "__p='": 5,
+            ") {\nvar __p, __t, __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n": 5,
+            "++index < length": 5,
+            "\"use strict\"; return function(": 7,
+            " || {}) {\n": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.16.3": {
+        "stringLiterals": {
+            "4.16.3": 0,
+            "Unsupported core-js use. Try https://github.com/es-shims.": 4
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.9.1": {
+        "stringLiterals": {
+            "isArray": 5
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.2": {
+        "stringLiterals": {
+            "\\d*(?:(?:1ST|2ND|3RD|(?![123])\\dTH)\\b)": 6,
+            "\\d*(?:(?:1st|2nd|3rd|(?![123])\\dth)\\b)": 6,
+            "4.17.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    }
+}

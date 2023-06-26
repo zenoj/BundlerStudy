@@ -1,0 +1,33 @@
+{
+  "name": "bt",
+  "version": "1.0.0",
+  "description": "sdf",
+  "main": "BundleCategorizer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenoj/BT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zenoj/BT/issues"
+  },
+  "homepage": "https://github.com/zenoj/BT#readme",
+  "dependencies": {
+    "@supercharge/queue-datastructure": "^2.1.0",
+    "acorn": "^8.7.1",
+    "axios": "^0.27.2",
+    "escodegen": "^2.0.0",
+    "esprima": "^4.0.1",
+    "esprima-walk": "^0.1.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "puppeteer": "^13.6.0",
+    "puppeteer-cluster": "^0.23.0",
+    "puppeteer-extra": "^3.2.3",
+    "puppeteer-extra-plugin-stealth": "^2.9.0"
+  }
+}

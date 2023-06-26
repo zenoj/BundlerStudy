@@ -1,0 +1,250 @@
+{
+    "4.17.21": { "features": ["4.17.21"], "similarVersions": [] },
+    "4.17.1": { "features": ["4.17.1"], "similarVersions": [] },
+    "4.11.1": { "features": ["4.11.1"], "similarVersions": [] },
+    "4.6.0": { "features": ["4.6.0"], "similarVersions": [] },
+    "2.0.0": { "features": ["2.0.0"], "similarVersions": [] },
+    "4.8.0": { "features": ["4.8.0"], "similarVersions": ["4.8.1"] },
+    "3.8.0": {
+        "features": ["53", "__dropCount__", "return this"],
+        "similarVersions": [
+            "3.5.0",
+            "3.6.0",
+            "3.4.0",
+            "3.3.0",
+            "3.7.0",
+            "3.3.1"
+        ]
+    },
+    "4.17.15": { "features": ["4.17.15"], "similarVersions": [] },
+    "0.5.1": { "features": ["0.5.1"], "similarVersions": [] },
+    "2.1.0": { "features": ["2.1.0"], "similarVersions": [] },
+    "4.17.12": { "features": ["4.17.12"], "similarVersions": [] },
+    "4.13.0": { "features": ["4.13.0"], "similarVersions": [] },
+    "3.9.3": {
+        "features": ["isArray", "__dropCount__"],
+        "similarVersions": ["3.9.2", "3.9.0", "3.9.1"]
+    },
+    "4.16.5": { "features": ["4.16.5"], "similarVersions": [] },
+    "0.7.0": { "features": ["__token"], "similarVersions": [] },
+    "4.16.4": { "features": ["4.16.4"], "similarVersions": [] },
+    "4.17.0": { "features": ["4.17.0"], "similarVersions": [] },
+    "3.9.0": {
+        "features": ["isArray", "__dropCount__"],
+        "similarVersions": ["3.9.2", "3.9.3", "3.9.1"]
+    },
+    "2.3.0": { "features": ["2.3.0"], "similarVersions": [] },
+    "4.16.1": { "features": ["4.16.1"], "similarVersions": [] },
+    "0.8.1": {
+        "features": [
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === +length) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result"
+        ],
+        "similarVersions": []
+    },
+    "2.4.2": { "features": ["2.4.2"], "similarVersions": [] },
+    "0.9.1": { "features": ["0.9.1"], "similarVersions": [] },
+    "4.14.1": { "features": ["4.14.1"], "similarVersions": [] },
+    "4.2.1": { "features": ["4.2.1"], "similarVersions": [] },
+    "4.17.18": { "features": ["4.17.18"], "similarVersions": [] },
+    "4.17.5": { "features": ["4.17.5"], "similarVersions": [] },
+    "3.1.0": { "features": ["3"], "similarVersions": ["3.0.0", "3.0.1"] },
+    "4.14.0": { "features": ["4.14.0"], "similarVersions": [] },
+    "0.2.0": { "features": ["50000"], "similarVersions": [] },
+    "1.1.0": { "features": ["1.1.0"], "similarVersions": [] },
+    "1.0.0-rc.3": {
+        "features": [
+            "<% if (obj.useStrict) { %>'use strict';\n<% } %>var index, iteratee = <%= firstArg %>, result = <%= firstArg %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayLoop) { %>var length = iteratee.length; index = -1;\nif (typeof length == 'number') {  <% if (noCharByIndex) { %>\n  if (isString(iteratee)) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  while (++index < length) {\n    <%= arrayLoop %>\n  }\n}\nelse {  <%  } else if (nonEnumArgs) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      index += '';\n      <%= objectLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    <%= objectLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    <%= objectLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    <%= objectLoop %>\n  }    <% } %>  <% } %>  <% if (arrayLoop || nonEnumArgs) { %>\n}<% } %>\n<%= bottom %>;\nreturn result"
+        ],
+        "similarVersions": []
+    },
+    "0.6.1": { "features": ["0.6.1"], "similarVersions": [] },
+    "4.12.0": { "features": ["4.12.0"], "similarVersions": [] },
+    "4.8.1": { "features": ["4.8.0"], "similarVersions": ["4.8.0"] },
+    "4.0.1": { "features": ["4.0.1"], "similarVersions": [] },
+    "0.4.0": { "features": ["0.4.0"], "similarVersions": [] },
+    "4.5.1": { "features": ["4.5.1"], "similarVersions": [] },
+    "4.11.0": { "features": ["4.11.0"], "similarVersions": [] },
+    "1.2.1": { "features": ["1.2.1"], "similarVersions": [] },
+    "4.17.4": { "features": ["4.17.4"], "similarVersions": [] },
+    "0.2.2": { "features": ["0.2.2"], "similarVersions": [] },
+    "3.10.1": { "features": ["isArray", "10"], "similarVersions": ["3.10.0"] },
+    "0.5.0-rc.1": {
+        "features": [
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = nativeKeys(iteratee),\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    if (!(skipProto && index == 'prototype')) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }\n  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result"
+        ],
+        "similarVersions": []
+    },
+    "1.0.0-rc.1": { "features": ["1.0.0-rc.1"], "similarVersions": [] },
+    "3.3.0": {
+        "features": ["53", "__dropCount__", "return this"],
+        "similarVersions": [
+            "3.8.0",
+            "3.5.0",
+            "3.6.0",
+            "3.4.0",
+            "3.7.0",
+            "3.3.1"
+        ]
+    },
+    "4.2.0": { "features": ["4.2.0"], "similarVersions": [] },
+    "4.17.17": { "features": ["4.17.17"], "similarVersions": [] },
+    "0.3.0": { "features": ["0.3.0"], "similarVersions": [] },
+    "0.3.1": { "features": ["0.3.1"], "similarVersions": [] },
+    "3.7.0": {
+        "features": ["53", "__dropCount__", "return this"],
+        "similarVersions": [
+            "3.8.0",
+            "3.5.0",
+            "3.6.0",
+            "3.4.0",
+            "3.3.0",
+            "3.3.1"
+        ]
+    },
+    "0.9.0": { "features": ["0.9.0"], "similarVersions": [] },
+    "3.6.0": {
+        "features": ["53", "__dropCount__", "return this"],
+        "similarVersions": [
+            "3.8.0",
+            "3.5.0",
+            "3.4.0",
+            "3.3.0",
+            "3.7.0",
+            "3.3.1"
+        ]
+    },
+    "1.0.1": { "features": ["1.0.1"], "similarVersions": [] },
+    "0.4.1": { "features": ["0.4.1"], "similarVersions": [] },
+    "4.17.10": { "features": ["4.17.10"], "similarVersions": [] },
+    "4.15.0": { "features": ["4.15.0"], "similarVersions": [] },
+    "0.1.0": { "features": ["array"], "similarVersions": [] },
+    "4.17.9": { "features": ["4.17.9"], "similarVersions": [] },
+    "4.6.1": { "features": ["4.6.1"], "similarVersions": [] },
+    "1.3.1": { "features": ["1.3.1"], "similarVersions": [] },
+    "1.2.0": { "features": ["1.2.0"], "similarVersions": [] },
+    "4.8.2": { "features": ["4.8.2"], "similarVersions": [] },
+    "0.5.2": {
+        "features": [
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length > -1 && length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result"
+        ],
+        "similarVersions": []
+    },
+    "4.4.0": { "features": ["4.4.0"], "similarVersions": [] },
+    "3.9.2": {
+        "features": ["isArray", "__dropCount__"],
+        "similarVersions": ["3.9.3", "3.9.0", "3.9.1"]
+    },
+    "4.16.6": { "features": ["4.16.6"], "similarVersions": [] },
+    "0.4.2": {
+        "features": [
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {<% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var props = nativeKeys(iteratee),\n      propIndex = -1,\n      length = props.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++propIndex < length) {\n    index = props[propIndex];\n    if (!(skipProto && index == 'prototype')) {\n      <%= objectBranch.inLoop %>\n    }\n  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result"
+        ],
+        "similarVersions": []
+    },
+    "3.0.1": { "features": ["3"], "similarVersions": ["3.1.0", "3.0.0"] },
+    "4.0.0": {
+        "features": ["(?:\\ud83c[\\udffb-\\udfff])?"],
+        "similarVersions": []
+    },
+    "4.13.1": { "features": ["4.13.1"], "similarVersions": [] },
+    "4.17.3": { "features": ["4.17.3"], "similarVersions": [] },
+    "0.8.0": {
+        "features": [
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === +length) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result"
+        ],
+        "similarVersions": []
+    },
+    "4.17.11": { "features": ["4.17.11"], "similarVersions": [] },
+    "4.17.13": { "features": ["4.17.13"], "similarVersions": [] },
+    "3.3.1": {
+        "features": ["53", "__dropCount__", "return this"],
+        "similarVersions": [
+            "3.8.0",
+            "3.5.0",
+            "3.6.0",
+            "3.4.0",
+            "3.3.0",
+            "3.7.0"
+        ]
+    },
+    "4.17.20": { "features": ["4.17.20"], "similarVersions": [] },
+    "0.5.0": { "features": ["0.5.0"], "similarVersions": [] },
+    "3.10.0": { "features": ["isArray", "10"], "similarVersions": ["3.10.1"] },
+    "4.7.0": { "features": ["4.7.0"], "similarVersions": [] },
+    "0.8.2": {
+        "features": [
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result = <%= init || firstArg %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === +length) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result"
+        ],
+        "similarVersions": []
+    },
+    "4.16.0": { "features": ["4.16.0"], "similarVersions": [] },
+    "4.14.2": { "features": ["4.14.2"], "similarVersions": [] },
+    "1.0.2": { "features": ["1.0.2"], "similarVersions": [] },
+    "0.10.0": { "features": ["0.10.0"], "similarVersions": [] },
+    "0.6.0": { "features": ["0.6.0"], "similarVersions": [] },
+    "4.9.0": { "features": ["4.9.0"], "similarVersions": [] },
+    "2.2.1": { "features": ["2.2.1"], "similarVersions": [] },
+    "3.4.0": {
+        "features": ["53", "__dropCount__", "return this"],
+        "similarVersions": [
+            "3.8.0",
+            "3.5.0",
+            "3.6.0",
+            "3.3.0",
+            "3.7.0",
+            "3.3.1"
+        ]
+    },
+    "3.0.0": { "features": ["3"], "similarVersions": ["3.1.0", "3.0.1"] },
+    "4.11.2": { "features": ["4.11.2"], "similarVersions": [] },
+    "3.5.0": {
+        "features": ["53", "__dropCount__", "return this"],
+        "similarVersions": [
+            "3.8.0",
+            "3.6.0",
+            "3.4.0",
+            "3.3.0",
+            "3.7.0",
+            "3.3.1"
+        ]
+    },
+    "3.2.0": {
+        "features": ["53", "__dropCount__"],
+        "similarVersions": [
+            "3.8.0",
+            "3.5.0",
+            "3.6.0",
+            "3.4.0",
+            "3.3.0",
+            "3.7.0",
+            "3.3.1"
+        ]
+    },
+    "1.1.1": { "features": ["1.1.1"], "similarVersions": [] },
+    "4.3.0": { "features": ["4.3.0"], "similarVersions": [] },
+    "4.10.0": { "features": ["4.10.0"], "similarVersions": [] },
+    "4.17.16": {
+        "features": ["[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]"],
+        "similarVersions": []
+    },
+    "4.5.0": { "features": ["4.5.0"], "similarVersions": [] },
+    "0.9.2": { "features": ["0.9.2"], "similarVersions": [] },
+    "1.0.0-rc.2": { "features": ["1.0.0-rc.2"], "similarVersions": [] },
+    "1.3.0": { "features": ["1.3.0"], "similarVersions": [] },
+    "1.0.0": { "features": ["1.0.0"], "similarVersions": [] },
+    "2.4.0": { "features": ["2.4.0"], "similarVersions": [] },
+    "4.1.0": { "features": ["4.1.0"], "similarVersions": [] },
+    "0.2.1": { "features": ["0.2.1"], "similarVersions": [] },
+    "4.17.19": { "features": ["4.17.19"], "similarVersions": [] },
+    "2.2.0": { "features": ["2.2.0"], "similarVersions": [] },
+    "2.4.1": { "features": ["2.4.1"], "similarVersions": [] },
+    "4.16.2": { "features": ["4.16.2"], "similarVersions": [] },
+    "4.17.14": { "features": ["4.17.14"], "similarVersions": [] },
+    "0.3.2": { "features": ["0.3.2"], "similarVersions": [] },
+    "4.16.3": { "features": ["4.16.3"], "similarVersions": [] },
+    "3.9.1": {
+        "features": ["isArray", "__dropCount__"],
+        "similarVersions": ["3.9.2", "3.9.3", "3.9.0"]
+    },
+    "4.17.2": { "features": ["4.17.2"], "similarVersions": [] }
+}

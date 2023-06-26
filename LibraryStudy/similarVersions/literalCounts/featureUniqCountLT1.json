@@ -1,0 +1,1243 @@
+{
+    "4.17.21": {
+        "stringLiterals": {
+            "4.17.21": 0,
+            "Invalid `variable` option passed into `_.template`": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.1": {
+        "stringLiterals": {
+            "4.17.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.11.1": {
+        "stringLiterals": {
+            "4.11.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.6.0": {
+        "stringLiterals": {
+            "4.6.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.0.0": {
+        "stringLiterals": {
+            "2.0.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.8.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.8.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.15": {
+        "stringLiterals": {
+            "4.17.15": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.5.1": {
+        "stringLiterals": {
+            "0.5.1": 0,
+            "if (!(object && objectTypes[typeof object])) return result": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.1.0": {
+        "stringLiterals": {
+            "2.1.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.12": {
+        "stringLiterals": {
+            "4.17.12": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.13.0": {
+        "stringLiterals": {
+            "4.13.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.9.3": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.16.5": {
+        "stringLiterals": {
+            "4.16.5": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.7.0": {
+        "stringLiterals": {
+            "__token": 0,
+            "__": 0,
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length > -1 && length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;\n    <% if (!hasDontEnumBug || useHas) { %>}\n<% } %>  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.7.0": 0,
+            "var isArr, recursive = indicator == isPlainObject,\n    data = recursive ? arguments[3] : { values: [], sources: [] };\nfor (var argsIndex = 1, argsLength = recursive ? 2 : arguments.length; argsIndex < argsLength; argsIndex++) {\n  if (iteratee = arguments[argsIndex]) {": 0,
+            "if ((source = value) && ((isArr = isArray(source)) || isPlainObject(source))) {\n  var found = false, values = data.values, sources = data.sources, stackLength = sources.length;\n  while (stackLength--) {\n    if (found = sources[stackLength] == source) break\n  }\n  if (found) {\n    result[index] = values[stackLength]\n  } else {\n    values.push(value = (value = result[index]) && isArr\n      ? (isArray(value) ? value : [])\n      : (isPlainObject(value) ? value : {})\n    );\n    sources.push(source);\n    result[index] = callee(value, source, isPlainObject, data)\n  }\n} else if (source != null) {\n  result[index] = source\n}": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.16.4": {
+        "stringLiterals": {
+            "4.16.4": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.0": {
+        "stringLiterals": {
+            "4.17.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.9.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.3.0": {
+        "stringLiterals": {
+            "2.3.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.16.1": {
+        "stringLiterals": {
+            "4.16.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.8.1": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === +length) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.8.1": 0,
+            "if (isFunction(value)) {\n  result[index] = bind(value, result)\n}": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.4.2": {
+        "stringLiterals": {
+            "2.4.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.9.1": {
+        "stringLiterals": {
+            "0.9.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.14.1": {
+        "stringLiterals": {
+            "4.14.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.2.1": {
+        "stringLiterals": {
+            "4.2.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.18": {
+        "stringLiterals": {
+            "4.17.18": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.5": {
+        "stringLiterals": {
+            "4.17.5": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.1.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.14.0": {
+        "stringLiterals": {
+            "4.14.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.2.0": {
+        "stringLiterals": {
+            "0.2.0": 0,
+            "arrayClass, bind, concat, funcClass, hasOwnProperty, identity, indexOf, isArray, isEmpty, objectTypes, slice, stringClass, toString, undefined": 0,
+            "var prop, isFunc = toString.call(callback) == funcClass;\nif (isFunc && thisArg) callback = bind(callback, thisArg)": 0,
+            "prop = isFunc\n  ? callback(collection[index], index, collection)\n  : collection[index][callback];\n(result[prop] || (result[prop] = [])).push(collection[index])": 0,
+            " == null) return result": 0,
+            "if (": 0
+        },
+        "numbers": {
+            "50000": 0
+        },
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.1.0": {
+        "stringLiterals": {
+            "1.1.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.0.0-rc.3": {
+        "stringLiterals": {
+            "<% if (obj.useStrict) { %>'use strict';\n<% } %>var index, iteratee = <%= firstArg %>, result = <%= firstArg %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayLoop) { %>var length = iteratee.length; index = -1;\nif (typeof length == 'number') {  <% if (noCharByIndex) { %>\n  if (isString(iteratee)) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  while (++index < length) {\n    <%= arrayLoop %>\n  }\n}\nelse {  <%  } else if (nonEnumArgs) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      index += '';\n      <%= objectLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    <%= objectLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    <%= objectLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    <%= objectLoop %>\n  }    <% } %>  <% } %>  <% if (arrayLoop || nonEnumArgs) { %>\n}<% } %>\n<%= bottom %>;\nreturn result": 0,
+            "1.0.0-rc.3": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.6.1": {
+        "stringLiterals": {
+            "0.6.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.12.0": {
+        "stringLiterals": {
+            "4.12.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.8.1": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.0.1": {
+        "stringLiterals": {
+            "4.0.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.4.0": {
+        "stringLiterals": {
+            "0.4.0": 0,
+            "__p = '": 0,
+            "__with": 0,
+            "}__": 0,
+            "' +\n__we(": 0,
+            ")) == null ? '' : __wt) +\n'": 0,
+            ", __e = _.escape, __we = __e": 0,
+            "' +\n((__wt = (": 0,
+            "\n}__\n__p += '": 0,
+            "__p += ": 0,
+            "';\n__with (": 0,
+            "([(\\s])": 0,
+            " = {});\nvar __p, __t, __wt, __d = ": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.5.1": {
+        "stringLiterals": {
+            "4.5.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.11.0": {
+        "stringLiterals": {
+            "4.11.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.2.1": {
+        "stringLiterals": {
+            "1.2.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.4": {
+        "stringLiterals": {
+            "4.17.4": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.2.2": {
+        "stringLiterals": {
+            "0.2.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.10.1": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.5.0-rc.1": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = nativeKeys(iteratee),\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    if (!(skipProto && index == 'prototype')) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }\n  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.5.0-rc.1": 0,
+            "arrayLikeClasses, ArrayProto, bind, compareAscending, concat, forIn, funcClass, hasOwnProperty, identity, indexOf, isArguments, isArray, isPlainObject, iteratorBind, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString": 0,
+            "if (toString.call(value) == funcClass) result.push(index)": 0,
+            ") return !value.length": 0,
+            "if (arrayLikeClasses[toString.call(value)]": 0,
+            "result[index] = {\n  criteria: callback(value, index, collection),\n  value: value\n}": 0,
+            "({\n  criteria: callback(value, index, collection),\n  value: value\n})": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.0.0-rc.1": {
+        "stringLiterals": {
+            "1.0.0-rc.1": 0,
+            "first": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.3.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.2.0": {
+        "stringLiterals": {
+            "4.2.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.17": {
+        "stringLiterals": {
+            "4.17.17": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.3.0": {
+        "stringLiterals": {
+            "0.3.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.3.1": {
+        "stringLiterals": {
+            "0.3.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.7.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.9.0": {
+        "stringLiterals": {
+            "0.9.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.6.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.0.1": {
+        "stringLiterals": {
+            "1.0.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.4.1": {
+        "stringLiterals": {
+            "0.4.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.10": {
+        "stringLiterals": {
+            "4.17.10": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.15.0": {
+        "stringLiterals": {
+            "4.15.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.1.0": {
+        "stringLiterals": {
+            "array": 0,
+            "var values=concat.apply([],slice.call(arguments,1))": 0,
+            "if(indexOf(values,array[index])<0)result.push(array[index])": 0,
+            "if(!callback(collection[index],index,collection))return !result": 0,
+            "for(var source,j=1,length=arguments.length;j<length;j++){\nsource=arguments[j]": 0,
+            "object[index]=source[index]": 0,
+            "callback(collection[index],index,collection)&&result.push(collection[index])": 0,
+            "collection,callback,thisArg": 0,
+            "if(!callback){\ncallback=identity\n}\nelse if(thisArg){\ncallback=bind(callback,thisArg)\n}": 0,
+            "callback(collection[index],index,collection)": 0,
+            "if(object!==Object(object))throw TypeError()": 0,
+            "var current,result=-Infinity,computed=result;\nif(!callback){\nif(isArray(collection)&&collection[0]===+collection[0])return Math.max.apply(Math,collection);\nif(isEmpty(collection))return result;\n}else if(thisArg)callback=bind(callback,thisArg)": 0,
+            "current=callback?callback(collection[index],index,collection):collection[index];\nif(current>=computed)computed=current,result=collection[index]": 0,
+            "objects": 0,
+            "var className=toString.call(value)": 0,
+            "if(className==arrayClass||className==stringClass)return !value.length": 0,
+            "arrayClass,bind,concat,funcClass,hasOwnProperty,identity,indexOf,Infinity,isArray,isEmpty,Math,slice,stringClass,toString,undefined": 0,
+            "collection,target": 0,
+            "if(collection[index]===target)return true": 0,
+            "if(callback(collection[index],index,collection))return collection[index]": 0,
+            "collection,property": 0,
+            "collection,callback,accumulator,thisArg": 0,
+            "var initial=arguments.length>2;\nif(thisArg)callback=bind(callback,thisArg)": 0,
+            "if(array[index])result.push(array[index])": 0,
+            "var values=slice.call(arguments,1)": 0,
+            "if(toString.call(object[index])==funcClass)result.push(index)": 0,
+            "0.1.0": 0,
+            "result=Array(length)": 0,
+            "result=[]": 0,
+            "result[index]=callback(collection[index],index,collection)": 0,
+            "result[result.length]=callback(collection[index],index,collection)": 0,
+            "beforeLoop": 0,
+            "loopExp": 0,
+            "inLoop": 0,
+            "afterLoop": 0,
+            "max": 0,
+            "min": 0,
+            ">=": 0,
+            "if(object[index]==undefined)": 0,
+            "__p+='": 0,
+            "return __p": 0,
+            "arrays": 0,
+            "result[index]=collection[index][property]": 0,
+            "result[result.length]=collection[index][property]": 0,
+            "if(!initial)result=collection[++index]": 0,
+            "result=callback(result,collection[index],index,collection)": 0,
+            "result=initial\n?callback(result,collection[index],index,collection)\n:(initial=true,collection[index])": 0,
+            "result[index]=collection[index]": 0,
+            "result[result.length]=collection[index]": 0,
+            "var __t,__j=Array.prototype.join,__p=\"\";function print(){__p+=__j.call(arguments,\"\")}\n": 0,
+            ";\nreturn ": 0,
+            "with(object||{}){\n": 0,
+            "){\n": 0,
+            ";\n__p+='": 0,
+            "))==null?'':__t)+\n'": 0,
+            "==undefined)return ": 0,
+            "'+\n((__t=(": 0,
+            "))==null?'':_.escape(__t))+\n'": 0,
+            ";\nif(": 0,
+            ";\nvar index, result": 0,
+            "=": 0,
+            ";\nwhile(": 0,
+            "++index<length": 0,
+            ",index)){\n": 0,
+            "\"use strict\";return function(": 0,
+            ";\nfor(": 0,
+            "if(hasOwnProperty.call(": 0,
+            ".length;\nindex=-1;\n": 0,
+            "if(length===+length){\n": 0,
+            "else{\n": 0,
+            "var length=": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.9": {
+        "stringLiterals": {
+            "4.17.9": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.6.1": {
+        "stringLiterals": {
+            "4.6.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.3.1": {
+        "stringLiterals": {
+            "1.3.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.2.0": {
+        "stringLiterals": {
+            "1.2.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.8.2": {
+        "stringLiterals": {
+            "4.8.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.5.2": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length > -1 && length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      value = iteratee[index];\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.5.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.4.0": {
+        "stringLiterals": {
+            "4.4.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.9.2": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.16.6": {
+        "stringLiterals": {
+            "4.16.6": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.4.2": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= exit %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === length >>> 0) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {<% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var props = nativeKeys(iteratee),\n      propIndex = -1,\n      length = props.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++propIndex < length) {\n    index = props[propIndex];\n    if (!(skipProto && index == 'prototype')) {\n      <%= objectBranch.inLoop %>\n    }\n  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {    <% if (hasDontEnumBug) { %>\n    <%   if (useHas) { %>if (hasOwnProperty.call(iteratee, index)) {\n  <% } %>    <%= objectBranch.inLoop %>;\n    <%   if (useHas) { %>}<% } %>    <% } else { %>\n    if (!(skipProto && index == 'prototype')<% if (useHas) { %> &&\n        hasOwnProperty.call(iteratee, index)<% } %>) {\n      <%= objectBranch.inLoop %>\n    }    <% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.4.2": 0,
+            "for (var iterateeIndex = 1, length = arguments.length; iterateeIndex < length; iterateeIndex++) {\n  iteratee = arguments[iterateeIndex];\n": 0,
+            "arrayClass, bind, compareAscending, funcClass, hasOwnProperty, identity, iteratorBind, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString": 0,
+            "  if (iteratee) {": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.0.1": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.0.0": {
+        "stringLiterals": {
+            "(?:\\ud83c[\\udffb-\\udfff])?": 0,
+            "+)?": 0,
+            "\\d+(?:": 0,
+            "4.0.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.13.1": {
+        "stringLiterals": {
+            "4.13.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.3": {
+        "stringLiterals": {
+            "4.17.3": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.8.0": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result<% if (init) { %> = <%= init %><% } %>;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === +length) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.8.0": 0,
+            "arrayLikeClasses, ArrayProto, bind, compareAscending, concat, createCallback, forIn, hasOwnProperty, identity, indexOf, isArguments, isArray, isFunction, isPlainObject, objectClass, objectTypes, nativeKeys, propertyIsEnumerable, slice, stringClass, toString, undefined": 0,
+            "if (!value) return result;\nvar className = toString.call(value),\n    length = value.length;\nif (arrayLikeClasses[className]": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.11": {
+        "stringLiterals": {
+            "4.17.11": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.13": {
+        "stringLiterals": {
+            "4.17.13": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.3.1": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.20": {
+        "stringLiterals": {
+            "4.17.20": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.5.0": {
+        "stringLiterals": {
+            "0.5.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.10.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.7.0": {
+        "stringLiterals": {
+            "4.7.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.8.2": {
+        "stringLiterals": {
+            "<% if (useStrict) { %>'use strict';\n<% } %>var index, value, iteratee = <%= firstArg %>, result = <%= init || firstArg %>;\nif (!<%= firstArg %>) return result;\n<%= top %>;\n<% if (arrayBranch) { %>var length = iteratee.length; index = -1;  <% if (objectBranch) { %>\nif (length === +length) {<% } %>  <% if (noCharByIndex) { %>\n  if (toString.call(iteratee) == stringClass) {\n    iteratee = iteratee.split('')\n  }  <% } %>\n  <%= arrayBranch.beforeLoop %>;\n  while (++index < length) {\n    value = iteratee[index];\n    <%= arrayBranch.inLoop %>\n  }  <% if (objectBranch) { %>\n}<% } %><% } %><% if (objectBranch) { %>  <% if (arrayBranch) { %>\nelse {  <%  } else if (noArgsEnum) { %>\n  var length = iteratee.length; index = -1;\n  if (length && isArguments(iteratee)) {\n    while (++index < length) {\n      value = iteratee[index += ''];\n      <%= objectBranch.inLoop %>\n    }\n  } else {  <% } %>  <% if (!hasDontEnumBug) { %>\n  var skipProto = typeof iteratee == 'function' && \n    propertyIsEnumerable.call(iteratee, 'prototype');\n  <% } %>  <% if (isKeysFast && useHas) { %>\n  var ownIndex = -1,\n      ownProps = objectTypes[typeof iteratee] ? nativeKeys(iteratee) : [],\n      length = ownProps.length;\n\n  <%= objectBranch.beforeLoop %>;\n  while (++ownIndex < length) {\n    index = ownProps[ownIndex];\n    <% if (!hasDontEnumBug) { %>if (!(skipProto && index == 'prototype')) {\n  <% } %>    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n    <% if (!hasDontEnumBug) { %>}\n<% } %>  }  <% } else { %>\n  <%= objectBranch.beforeLoop %>;\n  for (index in iteratee) {<%    if (!hasDontEnumBug || useHas) { %>\n    if (<%      if (!hasDontEnumBug) { %>!(skipProto && index == 'prototype')<% }      if (!hasDontEnumBug && useHas) { %> && <% }      if (useHas) { %>hasOwnProperty.call(iteratee, index)<% }    %>) {    <% } %>\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>;    <% if (!hasDontEnumBug || useHas) { %>\n    }<% } %>\n  }  <% } %>  <% if (hasDontEnumBug) { %>\n\n  var ctor = iteratee.constructor;\n    <% for (var k = 0; k < 7; k++) { %>\n  index = '<%= shadowed[k] %>';\n  if (<%      if (shadowed[k] == 'constructor') {        %>!(ctor && ctor.prototype === iteratee) && <%      } %>hasOwnProperty.call(iteratee, index)) {\n    value = iteratee[index];\n    <%= objectBranch.inLoop %>\n  }    <% } %>  <% } %>  <% if (arrayBranch || noArgsEnum) { %>\n}<% } %><% } %>\n<%= bottom %>;\nreturn result": 0,
+            "0.8.2": 0,
+            "collection || []": 0,
+            "isFunction(value) && result.push(index)": 0,
+            "if ((source = value) && ((isArr = isArray(source)) || isPlainObject(source))) {\n  var found = false, stackLength = stackA.length;\n  while (stackLength--) {\n    if (found = stackA[stackLength] == source) break\n  }\n  if (found) {\n    result[index] = stackB[stackLength]\n  } else {\n    stackA.push(source);\n    stackB.push(value = (value = result[index], isArr)\n      ? (isArray(value) ? value : [])\n      : (isPlainObject(value) ? value : {})\n    );\n    result[index] = callee(value, source, compareAscending, stackA, stackB)\n  }\n} else if (source != null) {\n  result[index] = source\n}": 0,
+            "if (typeof callback != 'function') {\n  var index = 0,\n      props = concat.apply(ArrayProto, arguments),\n      length = props.length;\n  while (++index < length) {\n    var prop = props[index];\n    if (prop in object) result[prop] = object[prop]\n  }\n} else {\n  callback = createCallback(callback, thisArg)": 0,
+            "undefined": 0,
+            "for (var pass = true, propIndex = 0; propIndex < propsLength; propIndex++) {\n  var prop = props[propIndex];\n  if (!(pass = value[prop] === properties[prop])) break\n}\npass && result.push(value)": 0,
+            "var funcs = arguments,\n    index = 0,\n    length = funcs.length;\nif (length > 1) {\n  while (++index < length) {\n    result[funcs[index]] = bind(result[funcs[index]], result)\n  }\n  return result\n}": 0,
+            "if (isFunction(value)) result[index] = bind(value, result)": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.16.0": {
+        "stringLiterals": {
+            "4.16.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.14.2": {
+        "stringLiterals": {
+            "4.14.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.0.2": {
+        "stringLiterals": {
+            "1.0.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.10.0": {
+        "stringLiterals": {
+            "0.10.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.6.0": {
+        "stringLiterals": {
+            "0.6.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.9.0": {
+        "stringLiterals": {
+            "4.9.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.2.1": {
+        "stringLiterals": {
+            "2.2.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.4.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.0.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.11.2": {
+        "stringLiterals": {
+            "4.11.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.5.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.2.0": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.1.1": {
+        "stringLiterals": {
+            "1.1.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.3.0": {
+        "stringLiterals": {
+            "4.3.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.10.0": {
+        "stringLiterals": {
+            "4.10.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.16": {
+        "stringLiterals": {
+            "[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]": 0,
+            "[\\ufe0e\\ufe0f]?": 0,
+            "(?:[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]|\\ud83c[\\udffb-\\udfff])?": 0,
+            "[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]": 0,
+            "4.17.16": 0,
+            "(?:\\u200d(?:": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {
+            "s": 0
+        },
+        "thisUsages": {}
+    },
+    "4.5.0": {
+        "stringLiterals": {
+            "4.5.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.9.2": {
+        "stringLiterals": {
+            "0.9.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.0.0-rc.2": {
+        "stringLiterals": {
+            "1.0.0-rc.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.3.0": {
+        "stringLiterals": {
+            "1.3.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "1.0.0": {
+        "stringLiterals": {
+            "1.0.0": 0,
+            ";\nif (argsLength > 2) {\n  if (typeof args[argsLength - 2] == 'function') {\n    var callback = createCallback(args[--argsLength - 1], args[argsLength--], 2);\n  } else if (typeof args[argsLength - 1] == 'function') {\n    callback = args[--argsLength];\n  }\n}": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.4.0": {
+        "stringLiterals": {
+            "2.4.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.1.0": {
+        "stringLiterals": {
+            "4.1.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.2.1": {
+        "stringLiterals": {
+            "0.2.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.19": {
+        "stringLiterals": {
+            "4.17.19": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.2.0": {
+        "stringLiterals": {
+            "2.2.0": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "2.4.1": {
+        "stringLiterals": {
+            "2.4.1": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.16.2": {
+        "stringLiterals": {
+            "4.16.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.14": {
+        "stringLiterals": {
+            "4.17.14": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "0.3.2": {
+        "stringLiterals": {
+            "0.3.2": 0,
+            "arrayClass, funcClass, hasOwnProperty, identity, iteratorBind, objectTypes, slice, stringClass, toString, undefined": 0,
+            "'+\n_.escape(": 0,
+            "result[index] = (isFunc ? methodName : collection[index][methodName]).apply(collection[index], args)": 0,
+            "result.push((isFunc ? methodName : collection[index][methodName]).apply(collection[index], args))": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.16.3": {
+        "stringLiterals": {
+            "4.16.3": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "3.9.1": {
+        "stringLiterals": {},
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    },
+    "4.17.2": {
+        "stringLiterals": {
+            "4.17.2": 0
+        },
+        "numbers": {},
+        "instanceofInst": {},
+        "methodnames": {},
+        "classAttributesThis": {},
+        "thisUsages": {}
+    }
+}
