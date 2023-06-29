@@ -118,7 +118,7 @@ function makeNodeObjValueObj(modObj){
 class Node {
     constructor(value) {
         this.id = value;
-        this.adjacents = []; // adjacency list
+        this.adjacents = []; 
     }
 
     addAdjacent(node) {

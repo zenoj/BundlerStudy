@@ -1,4 +1,3 @@
-// look again at /home/jay/thesis/analysis/Top1500-2000/accorhotels.com/all.accor.com_authenticat, there are some other versions of the fingerprints.
 const Webpack4RequireShuffled = `
   function t(n) {
     if (i[n]) return i[n].exports;

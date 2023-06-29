@@ -15,7 +15,7 @@ async function runWebpackAnalysis(topPath){
 
      */
 
-    // starting at TopX, go through each package and write bundle report for each bundle
+    // go through each package and write bundle report for each bundle
     let domainPath
     for (const domain of await fs.readdir(topPath)) {
         domainPath = path.join(topPath, domain);
@@ -94,10 +94,7 @@ function urlToDomain(url) {
     return a[a.length-2];
 }
 
-//
-// (async (a) => {
-//     await runWebpackAnalysis(a)
-// })(process.argv[2]);
+const filepath = ""
 (async (a) => {
     await runWebpackAnalysis(a)
-})("/home/jay/thesis/analysis/Results/test/perDomain/top10/");
+})(filepath);

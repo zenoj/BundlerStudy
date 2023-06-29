@@ -1,12 +1,11 @@
 const fs = require("fs").promises;
 const path = require("path");
 const {parseBundle} = require("../BundlerStats/QuantifyStats");
-// collect all evil files to compare to
 
 
-async function collect(topPath, outPath){
+async function collect(topPath, outPath, vulnLibrariesPath){
     let resultObj = {}
-    let b = await fs.readFile("/home/jay/BT/vulnLibraries/merged.json")
+    let b = await fs.readFile(vulnLibrariesPath)
     let file = JSON.parse(b.toString())
     let vulnLibraries = Object.keys(file);
     let domainPath;
@@ -46,8 +45,4 @@ async function collect(topPath, outPath){
  (async (perDomainPath, outPath)=>{
      await collect(perDomainPath, outPath);
 })(process.argv[2], process.argv[3]);
-// (async (perDomainPath, outPath)=>{
-   //  await collect(perDomainPath, outPath);
-// })("/home/jay/thesis/analysis/Results/test/perDomain/top10", "/home/jay/thesis/analysis/Results/test/perDomain/wordlists");
 
-// test

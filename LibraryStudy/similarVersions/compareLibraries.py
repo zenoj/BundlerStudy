@@ -116,10 +116,6 @@ def compareOrder(a1, a2):
     print("longest common subsequence is:", maximum)
     #
 
-# # sanity test compare file with itself
-# compareFiles("/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions/0.1.0/modules/lodash.js/bundle.jsfeatures", "/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions/0.1.0/modules/lodash.js/bundle.jsfeatures")
-# # test compare files: compare lodash version 0.1.0 with 0.2.0
-# compareFiles("/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions/0.1.0/modules/lodash.js/bundle.jsfeatures","/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions/0.2.0/modules/lodash.js/bundle.jsfeatures")
 
 def compareAll(obj1, obj2):
     diff = {"order":{}, "absolut":{}, "this":{}}
@@ -142,4 +138,3 @@ def compareAll(obj1, obj2):
     
     return diff
 
-# print(compareAll("/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions/0.1.0/modules/lodash.js/bundle.jsfeatures","/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions/0.2.0/modules/lodash.js/bundle.jsfeatures"))

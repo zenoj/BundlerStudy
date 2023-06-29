@@ -70,4 +70,3 @@ def compareAll(obj1, obj2):
     diff["this"]["this"] = min(divideByZero(thisUsages1, thisUsages2), divideByZero(thisUsages2, thisUsages1))
     return diff
 
-# print(compareAll("/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions/0.1.0/modules/lodash.js/bundle.jsfeatures","/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions/0.2.0/modules/lodash.js/bundle.jsfeatures"))

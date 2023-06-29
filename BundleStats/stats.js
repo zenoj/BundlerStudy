@@ -25,7 +25,7 @@ async function runStats(topPath, outPath) {
      */
     let tmp = topPath.split("/");
     let outName = tmp[tmp.length -2];
-    // starting at TopX, go through each package and write bundle report for each bundle
+    // go through each package and write bundle report for each bundle
     let domainPath
     const totalReport = {};
     const firstPartyReport = initReportObj()
@@ -117,15 +117,7 @@ function initReportObj(){
     return report;
 }
 
-// takes care of
-/*
-        "totalSizeModules":0,
-        "numberModules":0,
-        "moduleFreq",
-        // root module stats
-        "numberRootModules",
-        "rootModuleFreq"
- */
+
 function makeDepTreeAnalysis(obj, tmpReport, hasSourcemap){
     if(Object.keys(obj).length === 0){
         return
@@ -219,10 +211,5 @@ function makeSourcemapStats(jObj, srcMapReport){
 
 
 
-(async (perDomainDir, outdir)=>{
-   await runStats(perDomainDir, outdir);
-})("/home/jay/thesis/analysis/Results/test/perDomain/top10/", "/home/jay/thesis/analysis/Results/test/stats")
 
- // (async (perDomainDir, outpath)=>{
- //     await runStats(perDomainDir, outpath);
- // })(process.argv[2], process.argv[3])
+

@@ -13,18 +13,19 @@ def getAllFileNames(startDir, filenamePattern):
     return cfiles
 
 def getAllLodash(startDir):
-    basepath = "/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions"
-    versions = os.listdir(basepath)
+    versions = os.listdir(startDir)
     files = []
     for v in versions:
-        files.append(os.path.join(basepath, v, "modules", "lodash.js", "bundle.jsfeatures"))
+        files.append(os.path.join(startDir, v, "modules", "lodash.js", "bundle.jsfeatures"))
     return files
 
-def uniqueness():
+BASEPATH = ""
+VERSIONPATH = ""
+
+def uniqueness(basepath, versionpath):
     # version maps to different literals which in turn map to array of similiar versions
     similarities = {}
-    basepath = "/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions"
-    lodashjsFiles = getAllLodash("/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions")
+    lodashjsFiles = getAllLodash(versionpath)
     # preopen all files
     objList = []
     for l in lodashjsFiles:
@@ -51,7 +52,6 @@ def uniqueness():
             #     similarities[versionf1].append(versionf2)
             #     similarities[versionf2].append(versionf1)
             
-    # simPath = "/home/jay/thesis/LibraryDetection/similarVersions"
     # out_file = open(f"{simPath}/all.json", "w")
     # json.dump(similarities, out_file, indent = 4)
     # out_file.close() 
@@ -67,4 +67,4 @@ def computeScore(diff):
                 score += n
     return score/c
 
-uniqueness()
+uniqueness(BASEPATH, VERSIONPATH)

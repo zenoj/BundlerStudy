@@ -49,5 +49,3 @@ def bundleLibrary():
         print(output.stdout.decode("utf-8"))
 
 bundleLibrary()          
-# bundleLibrary("/home/jay/thesis/LibraryDetection/node_modules/lodash0.1.0/", 
-# "lodash", "0.1.0", "/home/jay/thesis/LibraryDetection")

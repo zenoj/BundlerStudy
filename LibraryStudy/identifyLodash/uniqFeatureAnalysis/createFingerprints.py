@@ -1,6 +1,9 @@
 import os
 import json
 
+VERSIONTOFEATURES = ""
+FINGERPRINTS = ""
+
 def getAllLodashFeatures(startDir):
     basepath = startDir
     versions = os.listdir(basepath)
@@ -11,10 +14,10 @@ def getAllLodashFeatures(startDir):
 
 # use repeated intersection for least common features to find combination that yields uniqueness.    
 # and if we cannot have uniqueness, then we straight away get the list of libraries we could have in front of us.
-def generateFPs():
+def generateFPs(versionToFeatureFilePath, fingerprints):
     
     litCountObj = {}
-    with open('/home/jay/thesis/LibraryDetection/similarVersions/literalCounts/VersionsToFeatures.json') as f:
+    with open(versionToFeatureFilePath) as f:
         litCountObj = json.load(f)
 
     fullFeaturesminheap = {}
@@ -48,10 +51,10 @@ def generateFPs():
         fingerprints[version]["similarVersions"] = list(possibleVersions)    
         i = 1    
 
-    with open('/home/jay/thesis/LibraryDetection/similarVersions/fingerprints.json', "w") as h:
+    with open(FINGERPRINTS, "w") as h:
         json.dump(fingerprints, h)
 
     # merge features of each library version into fullFeatures to find least common feature
     
 
-generateFPs()
+generateFPs(VERSIONTOFEATURES)

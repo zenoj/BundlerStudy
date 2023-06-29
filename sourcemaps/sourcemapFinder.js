@@ -113,11 +113,7 @@ function isRelativePath(url){
     return !url.includes("/");
 }
 
-// tests
-// (async () => {
-//     let fileContent = await fs.promises.readFile("/home/jay/thesis/analysis/Results/test/webpack/t.focus-res.cn_front-end_sohu_focusbe_in_sohu_webpack");
-//     let result = await sourceMapFinder(fileContent.toString(), "https://www.starbucks.com/_next/static/chunks/main-d7c17a6317f36430.js");
-// })()
+
 
 
 module.exports = {sourceMapFinder};

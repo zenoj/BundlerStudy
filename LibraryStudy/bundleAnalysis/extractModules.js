@@ -2,9 +2,9 @@ const parser = require("acorn");
 const fs = require("fs");
 const {
     BuildSCC,
-} = require("/home/jay/thesis/BT/webpack/BuildDependencyTree/webpack5");
+} = require("../../webpack/BuildDependencyTree/webpack5");
 const wp5Finder = require("./extractModuleObject");
-const { regenerateCode } = require("../../BT/webpack/analyseWebpack");
+const { regenerateCode } = require("../../webpack/analyseWebpack");
 
 function extractModuleCodeWP5FromCustomFormat(filepath) {
     let ast;
@@ -109,13 +109,7 @@ function collectCode(SCC, modObj) {
     return SCCsCode;
 }
 
-// function TestExtraction(dir){
-//     for (file of fs.readdirSync(dir)){
-//         let res = extractModuleCodeWP5(dir + file)
 
-//     }
-// }
 
-// TestExtraction("/home/jay/github/LibraryDetection/someBundles/sourcemapBundles/")
 
 module.exports = { extractModuleCodeWP5, extractModuleCodeWP5FromCustomFormat };

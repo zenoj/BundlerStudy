@@ -31,17 +31,8 @@ async function mergeLibraryStats(topPath){
 }
 
 async function sortLibraries(firstPartyBundles, thirdPartyBundles){
-    // put libraries together
-
-    // sort the libraries
     let libraries1p = firstPartyBundles;
-    // let libraries3p = thirdPartyBundles;
-    // for (const [library, freq] of Object.entries(libraries1p)) {
-    //     if(!libraries3p.hasOwnProperty(library)){
-    //         libraries3p[library] = 0;
-    //     }
-    //     libraries3p[library] += freq;
-    // }
+    
     let libraries = libraries1p;
     let freq = [];
     let keysSorted = Object.keys(libraries1p).sort(function(a,b){return libraries[a]-libraries[b]})
@@ -76,21 +67,7 @@ async function getRepForNpmPackage(npmPackage, page){
     return [true, {"finalScore": final_score, "quality": quality, "popularity": popularity, "maintenance": maintenance}];
 }
 
-// (async ()=>{
-//     const b = await fs.readFile("/home/jay/WebstormProjects/scraper/perBundleStats/merged/all.json");
-//     let obj = JSON.parse(b.toString());
-//     let sorted = sortLibraries(obj["firstPartyBundles"], obj["thirdPartyBundles"]);
-//     let mostIncluded1p = sorted[0];
-//     let mostIncluded3p = sorted[2];
-//     // prepare for top/least 10 statistic
-//     let mostCommon10_1p = mostIncluded1p.slice(0,10);
-//     let leastCommon10_1p = mostIncluded1p.slice(0,10);
-//     let mostCommon10_3p = mostIncluded3p.slice(0,10);
-//     let leastCommon10_3p = mostIncluded3p.slice(0,10);
-//     // fetch stats for all libraries
-//
-//
-// })()
+
 
 async function fetchStatsForLibraries(libraries, page1){
     let reputation = {}
@@ -107,13 +84,12 @@ async function fetchStatsForLibraries(libraries, page1){
 }
 
 
-async function customStats(){
+async function customStats(filename){
 
     const browser = await puppeteer.launch({
         headless: true
     });
     let npm_api_prefix = "https://api.npms.io/v2/package/";
-    let filename = "/home/jay/WebstormProjects/scraper/perBundleStats/libraries/worstRatedLibraries.json";
     const page = await browser.newPage();
     let b = await fs.readFile(filename);
     let libraryObj = JSON.parse(b.toString());
@@ -154,36 +130,12 @@ async function customStats(){
         let maintenance = obj["score"]["detail"]["maintenance"]
         resultObj[library] = {"score":score, "popularity":popularity, "quality":quality, "maintenance":maintenance, "frequency":libraryObj[library], "lastPublished":lastPublished, "downloads":downloads}
     }
-    await fs.writeFile("/home/jay/WebstormProjects/scraper/perBundleStats/libraries/wrLibsMoreStats.json",
+    await fs.writeFile("./wrLibsMoreStats.json",
         JSON.stringify(resultObj), null, 4)
     await page.close();
     await browser.close();
 
 }
-// (async ()=>{
-//     const browser = await puppeteer.launch({
-//         headless: true
-//     });
-//     let topPath = "/home/jay/WebstormProjects/scraper/perBundleStats/libraries/"
-//     let file = "all.json";
-//     const page1 = await browser.newPage();
-//     const page2 = await browser.newPage();
-//     let b = await fs.readFile("/home/jay/WebstormProjects/scraper/perBundleStats/libraries/merged/all.json")
-//     let obj = JSON.parse(b.toString());
-//     let firstPartyLibs = Object.keys(obj["firstPartyBundles"]);
-//     let thirdPartyLibs = Object.keys(obj["thirdPartyBundles"]);
-//     let firstPartyStats = await fetchStatsForLibraries(firstPartyLibs, page1)
-//     let thirdPartyStats = await fetchStatsForLibraries(thirdPartyLibs, page2)
-//     await fs.writeFile(path.join(topPath,"repReport_"+file), JSON.stringify({"firstPartyStats":firstPartyStats, "thirdPartyStats": thirdPartyStats}));
-// })()
-
-// (async () => {
-//     let b = await fs.readFile("/home/jay/WebstormProjects/scraper/perBundleStats/libraries/merged/all.json")
-//     let obj = JSON.parse(b.toString());
-//     let sorted = await sortLibraries(obj["firstPartyBundles"], obj["thirdPartyBundles"]);
-//     // write 20 most common 3.party libraries with frequencies to file
-//     await fs.writeFile("/home/jay/WebstormProjects/scraper/perBundleStats/libraries/sorted1PAfterFreq.json", JSON.stringify({"libraries":sorted[0], "frequencies":sorted[1]}, null, 4))
-// })()
 
 
 

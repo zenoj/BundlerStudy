@@ -35,7 +35,4 @@ def mergeSubRoot(dir):
             maxRootURL = obj["maxRootModuleUrl"]   
 
     result = {"maxRoot":maxRoot, "maxRootURL": maxRootURL, "maxSub":maxSub, "maxSubURL": maxSubURL}         
-    with open("/home/jay/thesis/LibraryDetection/extremeOut/merged.json", "w") as f:
-        json.dump(result, f)
-
-mergeBundleCount("/home/jay/thesis/LibraryDetection/extremeBundlesOut", "/home/jay/thesis/LibraryDetection/extremeBundlesOut")
+    

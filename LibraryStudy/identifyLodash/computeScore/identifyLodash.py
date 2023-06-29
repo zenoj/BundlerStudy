@@ -91,7 +91,6 @@ def compareWithLodash(databaseDir, targetDir, outpath):
     # sortedVersions = sortVersions(versionRange)
     # print("is 90%% similar to the following versions", sortedVersions)
     # # findUnique features in files
-compareWithLodash("/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions", "/home/jay/thesis/LibraryDetection/testEnv/targetDir/s1", "/home/jay/thesis/LibraryDetection/outTest")
 
 # compareWithLodash()
 
@@ -101,4 +100,3 @@ compareWithLodash("/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/ver
 #     for f in files:
 #         identifyLodash(databaseDir, f, threshold)
 
-# testIdentifyLodash("/home/jay/thesis/LibraryDetection/ExampleLibraries/lodash/versions", "/home/jay/thesis/LibraryDetection/tmp/", 90)

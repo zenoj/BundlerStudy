@@ -136,8 +136,6 @@ function extractModObj(ast) {
     }
 }
 
-// let filepath =
-//     "/home/jay/thesis/LibraryDetection/d32-a.sdn.cz_d_32_c_static_QR_R_WdpWQ_2.0.696_webpack";
 let filepath = process.argv[2];
 let buf = fs.readFileSync(filepath);
 let bundleStr = parseBundle(buf.toString())["srcCode"];

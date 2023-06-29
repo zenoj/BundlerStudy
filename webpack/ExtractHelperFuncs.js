@@ -1,14 +1,6 @@
 // This function finds all the helper functions of webpack
 // All helper functions are bundled in the code after the webpack require function
 
-// ways to extract them:
-// 1. Find require function and then somehow continue from there.
-// 2. Find require function, save the identifier
-// 3. Find functions directly, maybe the quickest
-
-// I choose version 3: Find functions directly: DONE
-// Now we need to find a way to find places where n.d and n.r are used together
-
 let test1 = `n.m = t, n.c = e, n.d = function (t, e, i) {
         n.o(t, e) || Object.defineProperty(t, e, {
             enumerable: !0,
@@ -192,8 +184,6 @@ function find_r_d_Usages(ast) {
                         }
                     } else if(secondArgument.type === "Literal"){
                         // try second type
-                        // gehe durch restliche im sequence expression und ordne immer second
-                        // argument to return value
                         for(const objElem of node.expressions.slice(1)){
                             let RealFunctionName = objElem.arguments[1].raw;
                             let minifiedFunctionName = objElem.arguments[2].body.body[0].argument.name

@@ -84,7 +84,6 @@ async function crawlDomain(page, url, topPath) {
                 let contentHeader = (await resp.headers())['content-type'];
                 if (contentHeader !== undefined) {
                     if (contentHeader.includes("application/javascript") || contentHeader.includes("text/javascript")) {
-                        // here goes all the tests
                         scripts.set(req_url, response);
                     }
                 }
