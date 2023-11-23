@@ -67,9 +67,9 @@ async function detect(filecontent){
         let b = await fs.readFile()
         let res = await detect(b);
         if(res[0]){
-            console.log(`File:${filepath} matches with ${res[2]} fingerprint which indicates bundler:${res[1]}`)
+            console.log(`File:${file} matches with ${res[2]} fingerprint which indicates bundler:${res[1]}`)
         }
-        console.log(`No fingerprint matched file: ${filepath}`)
+        console.log(`No fingerprint matched file: ${file}`)
     }
 })()
 
