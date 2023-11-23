@@ -1,13 +1,13 @@
-const subs = require('./subSearch.js');
+const subs = require('../subSearch.js');
 // import fingerprints
-const esbuild = require('./Fingerprints/esbuild');
-const browserify = require('./Fingerprints/browserify');
-const parcel = require('./Fingerprints/parcel');
-const rollup = require('./Fingerprints/rollup');
-const webpack = require('./Fingerprints/Webpack');
+const esbuild = require('../Fingerprints/esbuild.js');
+const browserify = require('../Fingerprints/browserify.js');
+const parcel = require('../Fingerprints/parcel.js');
+const rollup = require('../Fingerprints/rollup.js');
+const webpack = require('../Fingerprints/Webpack.js');
 const parser = require("acorn");
-
 let keywords = ["require", "exports"];
+const args = require('yargs').argv;
 
 // const DetectionFPS = [webpack.FP, esbuild.FP, browserify.FP, parcel.FP, rollup.FP]
 const DetectionFPS = [webpack.FP]
