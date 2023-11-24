@@ -1,4 +1,5 @@
-const RequireHalf = `
+let parcelFPs = {
+    RequireHalf: `
 function newRequire(name, jumped) {
     if (!cache[name]) {
       if (!modules[name]) {
@@ -37,9 +38,9 @@ function newRequire(name, jumped) {
     function resolve(x){
       return modules[name][1][x] || x;
     }
-  }`
+  }`,
 
-const RequireP3 = `function Module(moduleName) {
+    RequireP3: `function Module(moduleName) {
     this.id = moduleName;
     this.bundle = newRequire;
     this.exports = {};
@@ -65,9 +66,9 @@ const RequireP3 = `function Module(moduleName) {
         error = e;
       }
     }
-  }`
+  }`,
 
-const RequireHalfMinified = `
+    RequireHalfMinified: `
     function f(t, n) {
         if (!r[t]) {
             if (!e[t]) {
@@ -89,9 +90,9 @@ const RequireHalfMinified = `
         function p(e) {
             return f(p.resolve(e))
         }
-    }`
+    }`,
 
-const RequireP3Minified = `f.isParcelRequire = !0, f.Module = function (e) {
+    RequireP3Minified: `f.isParcelRequire = !0, f.Module = function (e) {
         this.id = e, this.bundle = f, this.exports = {}
     }, f.modules = e, f.cache = r, f.parent = o, f.register = function (r, t) {
         e[r] = [function (e, r) {
@@ -102,34 +103,7 @@ const RequireP3Minified = `f.isParcelRequire = !0, f.Module = function (e) {
         f(t[c])
     } catch (e) {
         i || (i = e)
-    }`
+    }`,
+};
 
-
-
-const FP = {
-    name:"parcel",
-    detection: [
-        {
-            name:"half require function minified",
-            fingerprint: RequireHalfMinified,
-            implies: ["minified"]
-        },
-        {
-            name:"require function part3 minified",
-            fingerprint: RequireP3Minified,
-            implies: ["minified"]
-        },
-        {
-            name:"require function half",
-            fingerprint: RequireHalf,
-            implies: ["non minified"]
-        },
-        {
-            name:"require function p3",
-            fingerprint: RequireP3,
-            implies: ["non minified"]
-        },
-    ],
-}
-
-module.exports = {FP}
+module.exports = { parcelFPs };

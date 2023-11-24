@@ -1,0 +1,19 @@
+{
+    "bundlers": {
+        "metro": {
+            "name": "metro",
+            "detection": {
+                "name": "cjs require function",
+                "fingerprint": "function require",
+                "implies": ["non minified", "cjs"]
+            }
+        }
+    },
+    "includeDefault": {
+        "rollup": "false",
+        "esbuild": "true",
+        "webpack": "false",
+        "parcel": "true",
+        "browserify": "true"
+    }
+}
